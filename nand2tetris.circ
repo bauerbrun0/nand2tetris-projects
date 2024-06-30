@@ -56,6 +56,20 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(200,260)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(210,220)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(260,320)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(330,240)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
     <comp lib="0" loc="(430,310)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
@@ -97,10 +111,16 @@
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
     </comp>
+    <comp loc="(300,240)" name="Mux"/>
     <comp loc="(550,320)" name="AndGate"/>
     <comp loc="(560,170)" name="NotGate"/>
     <comp loc="(560,400)" name="OrGate"/>
     <comp loc="(570,500)" name="XorGate"/>
+    <wire from="(200,260)" to="(240,260)"/>
+    <wire from="(210,220)" to="(240,220)"/>
+    <wire from="(260,320)" to="(270,320)"/>
+    <wire from="(270,260)" to="(270,320)"/>
+    <wire from="(300,240)" to="(330,240)"/>
     <wire from="(430,310)" to="(500,310)"/>
     <wire from="(430,340)" to="(500,340)"/>
     <wire from="(440,170)" to="(500,170)"/>
@@ -274,5 +294,60 @@
     <wire from="(480,220)" to="(480,260)"/>
     <wire from="(480,220)" to="(520,220)"/>
     <wire from="(570,210)" to="(670,210)"/>
+  </circuit>
+  <circuit name="Mux">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="Mux"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <polygon fill="none" points="70,110 70,189 129,150 131,149" stroke="#000000"/>
+      <circ-anchor facing="east" x="130" y="150"/>
+      <circ-port dir="in" pin="130,210" x="70" y="130"/>
+      <circ-port dir="in" pin="130,270" x="70" y="170"/>
+      <circ-port dir="in" pin="190,350" x="100" y="170"/>
+      <circ-port dir="out" pin="750,240" x="130" y="150"/>
+    </appear>
+    <comp lib="0" loc="(130,210)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="a"/>
+    </comp>
+    <comp lib="0" loc="(130,270)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="b"/>
+    </comp>
+    <comp lib="0" loc="(190,350)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="sel"/>
+    </comp>
+    <comp lib="0" loc="(750,240)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="outp"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp loc="(300,200)" name="NotGate"/>
+    <comp loc="(430,210)" name="AndGate"/>
+    <comp loc="(430,280)" name="AndGate"/>
+    <comp loc="(610,240)" name="OrGate"/>
+    <wire from="(130,210)" to="(230,210)"/>
+    <wire from="(130,270)" to="(380,270)"/>
+    <wire from="(190,200)" to="(190,290)"/>
+    <wire from="(190,200)" to="(240,200)"/>
+    <wire from="(190,290)" to="(190,350)"/>
+    <wire from="(190,290)" to="(380,290)"/>
+    <wire from="(230,210)" to="(230,230)"/>
+    <wire from="(230,230)" to="(370,230)"/>
+    <wire from="(300,200)" to="(380,200)"/>
+    <wire from="(370,220)" to="(370,230)"/>
+    <wire from="(370,220)" to="(380,220)"/>
+    <wire from="(430,210)" to="(520,210)"/>
+    <wire from="(430,280)" to="(520,280)"/>
+    <wire from="(520,210)" to="(520,230)"/>
+    <wire from="(520,230)" to="(560,230)"/>
+    <wire from="(520,250)" to="(520,280)"/>
+    <wire from="(520,250)" to="(560,250)"/>
+    <wire from="(610,240)" to="(750,240)"/>
   </circuit>
 </project>
