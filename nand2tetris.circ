@@ -64,6 +64,7 @@
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
     </comp>
+    <comp loc="(550,320)" name="AndGate"/>
     <comp loc="(560,170)" name="NotGate"/>
     <wire from="(440,170)" to="(500,170)"/>
     <wire from="(560,170)" to="(650,170)"/>
@@ -99,5 +100,43 @@
     <wire from="(430,320)" to="(430,340)"/>
     <wire from="(430,340)" to="(480,340)"/>
     <wire from="(540,320)" to="(620,320)"/>
+  </circuit>
+  <circuit name="AndGate">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="AndGate"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <path d="M140,98 Q175,98 177,120" fill="none" stroke="#000000"/>
+      <path d="M144,140 Q175,142 177,121" fill="none" stroke="#000000"/>
+      <polyline fill="none" points="141,98 133,98" stroke="#000000"/>
+      <polyline fill="none" points="143,140 133,140" stroke="#000000"/>
+      <polyline fill="none" points="133,98 133,139" stroke="#000000"/>
+      <circ-anchor facing="east" x="180" y="120"/>
+      <circ-port dir="in" pin="350,220" x="130" y="110"/>
+      <circ-port dir="in" pin="350,260" x="130" y="130"/>
+      <circ-port dir="out" pin="600,240" x="180" y="120"/>
+    </appear>
+    <comp lib="0" loc="(350,220)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="a"/>
+    </comp>
+    <comp lib="0" loc="(350,260)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="b"/>
+    </comp>
+    <comp lib="0" loc="(600,240)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="outp"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(470,240)" name="NAND Gate"/>
+    <comp loc="(560,240)" name="NotGate"/>
+    <wire from="(350,220)" to="(410,220)"/>
+    <wire from="(350,260)" to="(410,260)"/>
+    <wire from="(410,220)" to="(410,230)"/>
+    <wire from="(470,240)" to="(500,240)"/>
+    <wire from="(560,240)" to="(600,240)"/>
   </circuit>
 </project>
