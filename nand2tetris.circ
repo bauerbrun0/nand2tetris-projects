@@ -56,8 +56,30 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(430,310)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(430,340)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
     <comp lib="0" loc="(440,170)" name="Pin">
       <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(440,390)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(440,420)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(600,400)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(610,310)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(650,170)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -66,8 +88,19 @@
     </comp>
     <comp loc="(550,320)" name="AndGate"/>
     <comp loc="(560,170)" name="NotGate"/>
+    <comp loc="(560,400)" name="OrGate"/>
+    <wire from="(430,310)" to="(500,310)"/>
+    <wire from="(430,340)" to="(500,340)"/>
     <wire from="(440,170)" to="(500,170)"/>
+    <wire from="(440,390)" to="(510,390)"/>
+    <wire from="(440,420)" to="(510,420)"/>
+    <wire from="(500,330)" to="(500,340)"/>
+    <wire from="(510,410)" to="(510,420)"/>
+    <wire from="(550,320)" to="(610,320)"/>
     <wire from="(560,170)" to="(650,170)"/>
+    <wire from="(560,400)" to="(600,400)"/>
+    <wire from="(600,400)" to="(610,400)"/>
+    <wire from="(610,310)" to="(610,320)"/>
   </circuit>
   <circuit name="NotGate">
     <a name="appearance" val="custom"/>
@@ -138,5 +171,46 @@
     <wire from="(410,220)" to="(410,230)"/>
     <wire from="(470,240)" to="(500,240)"/>
     <wire from="(560,240)" to="(600,240)"/>
+  </circuit>
+  <circuit name="OrGate">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="OrGate"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <path d="M100,111 Q130,131 100,149" fill="none" stroke="#000000"/>
+      <path d="M100,109 Q160,112 161,130" fill="none" stroke="#000000"/>
+      <path d="M101,149 Q161,151 161,130" fill="none" stroke="#000000"/>
+      <circ-anchor facing="east" x="160" y="130"/>
+      <circ-port dir="in" pin="330,240" x="110" y="140"/>
+      <circ-port dir="in" pin="330,310" x="110" y="120"/>
+      <circ-port dir="out" pin="600,270" x="160" y="130"/>
+    </appear>
+    <comp lib="0" loc="(330,240)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="a"/>
+    </comp>
+    <comp lib="0" loc="(330,310)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="b"/>
+    </comp>
+    <comp lib="0" loc="(600,270)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="outp"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(580,270)" name="NAND Gate"/>
+    <comp loc="(420,240)" name="NotGate"/>
+    <comp loc="(420,310)" name="NotGate"/>
+    <wire from="(330,240)" to="(360,240)"/>
+    <wire from="(330,310)" to="(360,310)"/>
+    <wire from="(420,240)" to="(510,240)"/>
+    <wire from="(420,310)" to="(510,310)"/>
+    <wire from="(510,240)" to="(510,250)"/>
+    <wire from="(510,250)" to="(520,250)"/>
+    <wire from="(510,290)" to="(510,310)"/>
+    <wire from="(510,290)" to="(520,290)"/>
+    <wire from="(580,270)" to="(600,270)"/>
   </circuit>
 </project>
