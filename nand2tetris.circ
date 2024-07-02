@@ -1255,7 +1255,7 @@
     <wire from="(930,510)" to="(950,510)"/>
   </circuit>
   <circuit name="Mux4Way16">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="Mux4Way16"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
@@ -1330,5 +1330,139 @@
     <wire from="(410,340)" to="(410,480)"/>
     <wire from="(440,320)" to="(520,320)"/>
     <wire from="(90,460)" to="(130,460)"/>
+  </circuit>
+  <circuit name="Mux8Way16">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Mux8Way16"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <polyline fill="none" points="50,170 50,270" stroke="#000000"/>
+      <polyline fill="none" points="50,270 150,220" stroke="#000000"/>
+      <polyline fill="none" points="50,169 150,220" stroke="#000000"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="6" text-anchor="middle" x="89" y="219">Mux8Way16</text>
+      <circ-anchor facing="east" x="150" y="220"/>
+      <circ-port dir="in" pin="140,560" x="90" y="250"/>
+      <circ-port dir="in" pin="190,180" x="50" y="180"/>
+      <circ-port dir="in" pin="190,220" x="50" y="190"/>
+      <circ-port dir="in" pin="190,260" x="50" y="200"/>
+      <circ-port dir="in" pin="190,300" x="50" y="210"/>
+      <circ-port dir="in" pin="190,340" x="50" y="230"/>
+      <circ-port dir="in" pin="190,380" x="50" y="240"/>
+      <circ-port dir="in" pin="190,420" x="50" y="250"/>
+      <circ-port dir="in" pin="190,460" x="50" y="260"/>
+      <circ-port dir="out" pin="650,320" x="150" y="220"/>
+    </appear>
+    <comp lib="0" loc="(140,560)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="sel3"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(190,180)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="a16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(190,220)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="b16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(190,260)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="c16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(190,300)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="d16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(190,340)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="e16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(190,380)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="f16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(190,420)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="g16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(190,460)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="h16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(210,560)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="facing" val="north"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+    </comp>
+    <comp lib="0" loc="(240,520)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(530,560)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="facing" val="north"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+    </comp>
+    <comp lib="0" loc="(650,320)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="out16"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp loc="(360,240)" name="Mux4Way16"/>
+    <comp loc="(360,400)" name="Mux4Way16"/>
+    <comp loc="(570,320)" name="Mux16"/>
+    <wire from="(140,560)" to="(210,560)"/>
+    <wire from="(190,180)" to="(270,180)"/>
+    <wire from="(190,220)" to="(270,220)"/>
+    <wire from="(190,260)" to="(270,260)"/>
+    <wire from="(190,300)" to="(270,300)"/>
+    <wire from="(190,340)" to="(270,340)"/>
+    <wire from="(190,380)" to="(270,380)"/>
+    <wire from="(190,420)" to="(270,420)"/>
+    <wire from="(190,460)" to="(270,460)"/>
+    <wire from="(210,560)" to="(530,560)"/>
+    <wire from="(240,320)" to="(240,480)"/>
+    <wire from="(240,320)" to="(330,320)"/>
+    <wire from="(240,480)" to="(240,520)"/>
+    <wire from="(240,480)" to="(330,480)"/>
+    <wire from="(270,180)" to="(270,210)"/>
+    <wire from="(270,210)" to="(300,210)"/>
+    <wire from="(270,220)" to="(270,230)"/>
+    <wire from="(270,230)" to="(300,230)"/>
+    <wire from="(270,250)" to="(270,260)"/>
+    <wire from="(270,250)" to="(300,250)"/>
+    <wire from="(270,270)" to="(270,300)"/>
+    <wire from="(270,270)" to="(300,270)"/>
+    <wire from="(270,340)" to="(270,370)"/>
+    <wire from="(270,370)" to="(300,370)"/>
+    <wire from="(270,380)" to="(270,390)"/>
+    <wire from="(270,390)" to="(300,390)"/>
+    <wire from="(270,410)" to="(270,420)"/>
+    <wire from="(270,410)" to="(300,410)"/>
+    <wire from="(270,430)" to="(270,460)"/>
+    <wire from="(270,430)" to="(300,430)"/>
+    <wire from="(330,260)" to="(330,320)"/>
+    <wire from="(330,420)" to="(330,480)"/>
+    <wire from="(360,240)" to="(450,240)"/>
+    <wire from="(360,400)" to="(450,400)"/>
+    <wire from="(450,240)" to="(450,300)"/>
+    <wire from="(450,300)" to="(510,300)"/>
+    <wire from="(450,340)" to="(450,400)"/>
+    <wire from="(450,340)" to="(510,340)"/>
+    <wire from="(540,340)" to="(540,540)"/>
+    <wire from="(570,320)" to="(650,320)"/>
   </circuit>
 </project>
