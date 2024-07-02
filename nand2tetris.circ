@@ -1465,4 +1465,82 @@
     <wire from="(540,340)" to="(540,540)"/>
     <wire from="(570,320)" to="(650,320)"/>
   </circuit>
+  <circuit name="DMux4Way">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="DMux4Way"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <polyline fill="none" points="110,121 110,199" stroke="#000000"/>
+      <polyline fill="none" points="110,120 50,160" stroke="#000000"/>
+      <polyline fill="none" points="50,160 110,200" stroke="#000000"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="6" text-anchor="middle" x="86" y="160">DMux4Way</text>
+      <circ-anchor facing="east" x="110" y="130"/>
+      <circ-port dir="in" pin="110,250" x="80" y="180"/>
+      <circ-port dir="in" pin="120,350" x="50" y="160"/>
+      <circ-port dir="out" pin="410,180" x="110" y="190"/>
+      <circ-port dir="out" pin="410,220" x="110" y="130"/>
+      <circ-port dir="out" pin="410,280" x="110" y="150"/>
+      <circ-port dir="out" pin="410,320" x="110" y="170"/>
+    </appear>
+    <comp lib="0" loc="(110,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="inp"/>
+    </comp>
+    <comp lib="0" loc="(120,350)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="sel2"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(200,350)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(320,350)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(410,180)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(410,220)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(410,280)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(410,320)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp loc="(250,230)" name="DMux"/>
+    <comp loc="(380,180)" name="DMux"/>
+    <comp loc="(380,280)" name="DMux"/>
+    <wire from="(110,250)" to="(190,250)"/>
+    <wire from="(120,350)" to="(200,350)"/>
+    <wire from="(200,350)" to="(320,350)"/>
+    <wire from="(210,270)" to="(210,330)"/>
+    <wire from="(210,270)" to="(220,270)"/>
+    <wire from="(250,230)" to="(310,230)"/>
+    <wire from="(250,270)" to="(310,270)"/>
+    <wire from="(310,200)" to="(310,230)"/>
+    <wire from="(310,200)" to="(320,200)"/>
+    <wire from="(310,270)" to="(310,300)"/>
+    <wire from="(310,300)" to="(320,300)"/>
+    <wire from="(340,220)" to="(340,320)"/>
+    <wire from="(340,220)" to="(350,220)"/>
+    <wire from="(340,320)" to="(340,330)"/>
+    <wire from="(340,320)" to="(350,320)"/>
+    <wire from="(380,180)" to="(410,180)"/>
+    <wire from="(380,220)" to="(410,220)"/>
+    <wire from="(380,280)" to="(410,280)"/>
+    <wire from="(380,320)" to="(410,320)"/>
+  </circuit>
 </project>
