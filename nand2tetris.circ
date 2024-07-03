@@ -1667,4 +1667,58 @@
     <wire from="(390,320)" to="(430,320)"/>
     <wire from="(390,340)" to="(430,340)"/>
   </circuit>
+  <circuit name="HalfAdder">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="HalfAdder"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <polyline fill="none" points="70,190 70,131" stroke="#000000"/>
+      <path d="M70,132 Q71,118 80,119" fill="none" stroke="#000000"/>
+      <polyline fill="none" points="81,119 131,130" stroke="#000000"/>
+      <path d="M131,130 Q141,133 141,141" fill="none" stroke="#000000"/>
+      <polyline fill="none" points="141,141 141,180" stroke="#000000"/>
+      <path d="M141,180 Q141,189 128,190" fill="none" stroke="#000000"/>
+      <polyline fill="none" points="86,200 129,190" stroke="#000000"/>
+      <path d="M70,191 Q69,204 85,200" fill="none" stroke="#000000"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="8" text-anchor="middle" x="107" y="161">HalfAdder</text>
+      <circ-anchor facing="east" x="140" y="150"/>
+      <circ-port dir="in" pin="110,220" x="70" y="140"/>
+      <circ-port dir="in" pin="110,260" x="70" y="180"/>
+      <circ-port dir="out" pin="340,240" x="140" y="150"/>
+      <circ-port dir="out" pin="340,310" x="140" y="170"/>
+    </appear>
+    <comp lib="0" loc="(110,220)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="a"/>
+    </comp>
+    <comp lib="0" loc="(110,260)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="b"/>
+    </comp>
+    <comp lib="0" loc="(340,240)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="sum"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(340,310)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="carry"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp loc="(300,310)" name="AndGate"/>
+    <comp loc="(310,240)" name="XorGate"/>
+    <wire from="(110,220)" to="(210,220)"/>
+    <wire from="(110,260)" to="(180,260)"/>
+    <wire from="(180,260)" to="(180,320)"/>
+    <wire from="(180,260)" to="(260,260)"/>
+    <wire from="(180,320)" to="(250,320)"/>
+    <wire from="(210,220)" to="(210,300)"/>
+    <wire from="(210,220)" to="(260,220)"/>
+    <wire from="(210,300)" to="(250,300)"/>
+    <wire from="(300,310)" to="(340,310)"/>
+    <wire from="(310,240)" to="(340,240)"/>
+  </circuit>
 </project>
