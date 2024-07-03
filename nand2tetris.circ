@@ -1667,8 +1667,72 @@
     <wire from="(390,320)" to="(430,320)"/>
     <wire from="(390,340)" to="(430,340)"/>
   </circuit>
-  <circuit name="HalfAdder">
+  <circuit name="FullAdder">
     <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="FullAdder"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <path d="M131,130 Q141,133 141,141" fill="none" stroke="#000000"/>
+      <path d="M70,191 Q69,204 85,200" fill="none" stroke="#000000"/>
+      <polyline fill="none" points="86,200 129,190" stroke="#000000"/>
+      <polyline fill="none" points="81,119 131,130" stroke="#000000"/>
+      <polyline fill="none" points="70,190 70,131" stroke="#000000"/>
+      <path d="M70,132 Q71,118 80,119" fill="none" stroke="#000000"/>
+      <path d="M141,180 Q141,189 128,190" fill="none" stroke="#000000"/>
+      <polyline fill="none" points="141,141 141,180" stroke="#000000"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="8" text-anchor="middle" x="105" y="163">FullAdder</text>
+      <circ-anchor facing="east" x="140" y="150"/>
+      <circ-port dir="in" pin="100,120" x="70" y="140"/>
+      <circ-port dir="in" pin="100,160" x="70" y="160"/>
+      <circ-port dir="in" pin="100,210" x="70" y="180"/>
+      <circ-port dir="out" pin="530,180" x="140" y="150"/>
+      <circ-port dir="out" pin="530,210" x="140" y="170"/>
+    </appear>
+    <comp lib="0" loc="(100,120)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="a"/>
+    </comp>
+    <comp lib="0" loc="(100,160)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="b"/>
+    </comp>
+    <comp lib="0" loc="(100,210)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="c"/>
+    </comp>
+    <comp lib="0" loc="(530,180)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="sum"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(530,210)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="carry"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp loc="(240,130)" name="HalfAdder"/>
+    <comp loc="(370,180)" name="HalfAdder"/>
+    <comp loc="(460,210)" name="OrGate"/>
+    <wire from="(100,120)" to="(170,120)"/>
+    <wire from="(100,160)" to="(170,160)"/>
+    <wire from="(100,210)" to="(300,210)"/>
+    <wire from="(240,130)" to="(280,130)"/>
+    <wire from="(240,150)" to="(250,150)"/>
+    <wire from="(250,150)" to="(250,240)"/>
+    <wire from="(250,240)" to="(380,240)"/>
+    <wire from="(280,130)" to="(280,170)"/>
+    <wire from="(280,170)" to="(300,170)"/>
+    <wire from="(370,180)" to="(530,180)"/>
+    <wire from="(370,200)" to="(410,200)"/>
+    <wire from="(380,220)" to="(380,240)"/>
+    <wire from="(380,220)" to="(410,220)"/>
+    <wire from="(460,210)" to="(530,210)"/>
+  </circuit>
+  <circuit name="HalfAdder">
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="HalfAdder"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
@@ -1720,5 +1784,28 @@
     <wire from="(210,300)" to="(250,300)"/>
     <wire from="(300,310)" to="(340,310)"/>
     <wire from="(310,240)" to="(340,240)"/>
+  </circuit>
+  <circuit name="Add16">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Add16"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(160,150)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="a16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(160,210)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="b16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(500,180)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="out16"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+    </comp>
   </circuit>
 </project>
