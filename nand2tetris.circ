@@ -1332,7 +1332,7 @@
     <wire from="(90,460)" to="(130,460)"/>
   </circuit>
   <circuit name="Mux8Way16">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="Mux8Way16"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
@@ -1548,7 +1548,7 @@
     <wire from="(380,320)" to="(410,320)"/>
   </circuit>
   <circuit name="DMux8Way">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="DMux8Way"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
@@ -2562,7 +2562,7 @@
     <wire from="(510,220)" to="(540,220)"/>
   </circuit>
   <circuit name="Register16">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="Register16"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
@@ -2769,5 +2769,125 @@
     <wire from="(660,400)" to="(660,410)"/>
     <wire from="(660,400)" to="(670,400)"/>
     <wire from="(690,240)" to="(700,240)"/>
+  </circuit>
+  <circuit name="RAM8">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="RAM8"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect fill="none" height="60" rx="10" ry="10" stroke="#000000" width="80" x="100" y="100"/>
+      <polyline fill="none" points="129,160 140,150" stroke="#000000"/>
+      <polyline fill="none" points="140,150 150,160" stroke="#000000"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="10" text-anchor="middle" x="139" y="132">RAM8</text>
+      <circ-anchor facing="east" x="180" y="130"/>
+      <circ-port dir="in" pin="170,310" x="100" y="140"/>
+      <circ-port dir="in" pin="180,170" x="100" y="120"/>
+      <circ-port dir="in" pin="300,110" x="140" y="100"/>
+      <circ-port dir="out" pin="810,420" x="180" y="130"/>
+    </appear>
+    <comp lib="0" loc="(170,310)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="address"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(180,170)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="in16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(300,110)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="load"/>
+    </comp>
+    <comp lib="0" loc="(810,420)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="out16"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp loc="(420,380)" name="DMux8Way"/>
+    <comp loc="(570,170)" name="Register16"/>
+    <comp loc="(570,240)" name="Register16"/>
+    <comp loc="(570,310)" name="Register16"/>
+    <comp loc="(570,380)" name="Register16"/>
+    <comp loc="(570,450)" name="Register16"/>
+    <comp loc="(570,520)" name="Register16"/>
+    <comp loc="(570,590)" name="Register16"/>
+    <comp loc="(570,660)" name="Register16"/>
+    <comp loc="(800,420)" name="Mux8Way16"/>
+    <wire from="(170,310)" to="(240,310)"/>
+    <wire from="(180,170)" to="(480,170)"/>
+    <wire from="(240,310)" to="(240,440)"/>
+    <wire from="(240,440)" to="(240,700)"/>
+    <wire from="(240,440)" to="(360,440)"/>
+    <wire from="(240,700)" to="(740,700)"/>
+    <wire from="(300,110)" to="(300,420)"/>
+    <wire from="(300,420)" to="(320,420)"/>
+    <wire from="(420,380)" to="(430,380)"/>
+    <wire from="(420,390)" to="(440,390)"/>
+    <wire from="(420,400)" to="(450,400)"/>
+    <wire from="(420,410)" to="(460,410)"/>
+    <wire from="(420,430)" to="(470,430)"/>
+    <wire from="(420,440)" to="(470,440)"/>
+    <wire from="(420,450)" to="(460,450)"/>
+    <wire from="(420,460)" to="(450,460)"/>
+    <wire from="(430,140)" to="(430,380)"/>
+    <wire from="(430,140)" to="(530,140)"/>
+    <wire from="(440,210)" to="(440,390)"/>
+    <wire from="(440,210)" to="(530,210)"/>
+    <wire from="(450,280)" to="(450,400)"/>
+    <wire from="(450,280)" to="(530,280)"/>
+    <wire from="(450,460)" to="(450,630)"/>
+    <wire from="(450,630)" to="(530,630)"/>
+    <wire from="(460,350)" to="(460,410)"/>
+    <wire from="(460,350)" to="(530,350)"/>
+    <wire from="(460,450)" to="(460,560)"/>
+    <wire from="(460,560)" to="(530,560)"/>
+    <wire from="(470,420)" to="(470,430)"/>
+    <wire from="(470,420)" to="(530,420)"/>
+    <wire from="(470,440)" to="(470,490)"/>
+    <wire from="(470,490)" to="(530,490)"/>
+    <wire from="(480,170)" to="(480,240)"/>
+    <wire from="(480,170)" to="(490,170)"/>
+    <wire from="(480,240)" to="(480,310)"/>
+    <wire from="(480,240)" to="(490,240)"/>
+    <wire from="(480,310)" to="(480,380)"/>
+    <wire from="(480,310)" to="(490,310)"/>
+    <wire from="(480,380)" to="(480,450)"/>
+    <wire from="(480,380)" to="(490,380)"/>
+    <wire from="(480,450)" to="(480,520)"/>
+    <wire from="(480,450)" to="(490,450)"/>
+    <wire from="(480,520)" to="(480,590)"/>
+    <wire from="(480,520)" to="(490,520)"/>
+    <wire from="(480,590)" to="(480,660)"/>
+    <wire from="(480,590)" to="(490,590)"/>
+    <wire from="(480,660)" to="(490,660)"/>
+    <wire from="(570,170)" to="(600,170)"/>
+    <wire from="(570,240)" to="(590,240)"/>
+    <wire from="(570,310)" to="(580,310)"/>
+    <wire from="(570,380)" to="(570,410)"/>
+    <wire from="(570,410)" to="(700,410)"/>
+    <wire from="(570,430)" to="(570,450)"/>
+    <wire from="(570,430)" to="(700,430)"/>
+    <wire from="(570,520)" to="(580,520)"/>
+    <wire from="(570,590)" to="(590,590)"/>
+    <wire from="(570,660)" to="(600,660)"/>
+    <wire from="(580,310)" to="(580,400)"/>
+    <wire from="(580,400)" to="(700,400)"/>
+    <wire from="(580,440)" to="(580,520)"/>
+    <wire from="(580,440)" to="(700,440)"/>
+    <wire from="(590,240)" to="(590,390)"/>
+    <wire from="(590,390)" to="(700,390)"/>
+    <wire from="(590,450)" to="(590,590)"/>
+    <wire from="(590,450)" to="(700,450)"/>
+    <wire from="(600,170)" to="(600,380)"/>
+    <wire from="(600,380)" to="(700,380)"/>
+    <wire from="(600,460)" to="(600,660)"/>
+    <wire from="(600,460)" to="(700,460)"/>
+    <wire from="(740,450)" to="(740,700)"/>
+    <wire from="(800,420)" to="(810,420)"/>
   </circuit>
 </project>
