@@ -2510,4 +2510,55 @@
     <wire from="(930,420)" to="(930,450)"/>
     <wire from="(930,450)" to="(960,450)"/>
   </circuit>
+  <circuit name="Bit">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Bit"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect fill="none" height="60" rx="10" ry="10" stroke="#000000" width="80" x="100" y="100"/>
+      <polyline fill="none" points="129,160 140,150" stroke="#000000"/>
+      <polyline fill="none" points="140,150 150,160" stroke="#000000"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="10" text-anchor="middle" x="140" y="132">Bit</text>
+      <circ-anchor facing="east" x="180" y="130"/>
+      <circ-port dir="in" pin="230,220" x="100" y="130"/>
+      <circ-port dir="in" pin="330,100" x="140" y="100"/>
+      <circ-port dir="out" pin="540,220" x="180" y="130"/>
+    </appear>
+    <comp lib="0" loc="(230,220)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="inp"/>
+    </comp>
+    <comp lib="0" loc="(330,100)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="load"/>
+    </comp>
+    <comp lib="0" loc="(400,260)" name="Clock"/>
+    <comp lib="0" loc="(540,220)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="outp"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="4" loc="(430,210)" name="D Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(350,240)" name="Mux"/>
+    <wire from="(230,220)" to="(240,220)"/>
+    <wire from="(240,220)" to="(240,260)"/>
+    <wire from="(240,260)" to="(290,260)"/>
+    <wire from="(280,180)" to="(280,220)"/>
+    <wire from="(280,180)" to="(510,180)"/>
+    <wire from="(280,220)" to="(290,220)"/>
+    <wire from="(320,260)" to="(330,260)"/>
+    <wire from="(330,100)" to="(330,260)"/>
+    <wire from="(350,240)" to="(390,240)"/>
+    <wire from="(390,220)" to="(390,240)"/>
+    <wire from="(390,220)" to="(420,220)"/>
+    <wire from="(400,260)" to="(420,260)"/>
+    <wire from="(480,220)" to="(510,220)"/>
+    <wire from="(510,180)" to="(510,220)"/>
+    <wire from="(510,220)" to="(540,220)"/>
+  </circuit>
 </project>
