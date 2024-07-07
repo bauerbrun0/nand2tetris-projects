@@ -2047,7 +2047,7 @@
     <wire from="(940,410)" to="(950,410)"/>
   </circuit>
   <circuit name="Inc16">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="Inc16"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
@@ -3721,5 +3721,94 @@
     <wire from="(200,220)" to="(300,220)"/>
     <wire from="(250,300)" to="(300,300)"/>
     <wire from="(540,300)" to="(580,300)"/>
+  </circuit>
+  <circuit name="PC">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="PC"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect fill="none" height="40" rx="10" ry="10" stroke="#000000" width="100" x="100" y="120"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="10" text-anchor="middle" x="149" y="140">PC (counter)</text>
+      <polyline fill="none" points="145,160 150,151" stroke="#000000"/>
+      <polyline fill="none" points="150,151 156,160" stroke="#000000"/>
+      <circ-anchor facing="east" x="200" y="140"/>
+      <circ-port dir="in" pin="140,190" x="100" y="140"/>
+      <circ-port dir="in" pin="220,110" x="150" y="120"/>
+      <circ-port dir="in" pin="330,110" x="120" y="120"/>
+      <circ-port dir="in" pin="440,110" x="180" y="120"/>
+      <circ-port dir="out" pin="730,300" x="200" y="140"/>
+    </appear>
+    <comp lib="0" loc="(140,190)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="in16"/>
+      <a name="radix" val="10unsigned"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(220,110)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="inc"/>
+    </comp>
+    <comp lib="0" loc="(330,110)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="load"/>
+    </comp>
+    <comp lib="0" loc="(390,320)" name="Constant">
+      <a name="value" val="0x0"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(440,110)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="reset"/>
+    </comp>
+    <comp lib="0" loc="(520,260)" name="Constant"/>
+    <comp lib="0" loc="(730,300)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="out16"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="10unsigned"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp loc="(240,300)" name="Mux16"/>
+    <comp loc="(350,300)" name="Mux16"/>
+    <comp loc="(460,300)" name="Mux16"/>
+    <comp loc="(570,300)" name="Register16"/>
+    <comp loc="(680,350)" name="Inc16"/>
+    <wire from="(140,190)" to="(280,190)"/>
+    <wire from="(160,230)" to="(160,280)"/>
+    <wire from="(160,230)" to="(600,230)"/>
+    <wire from="(160,280)" to="(180,280)"/>
+    <wire from="(160,320)" to="(160,410)"/>
+    <wire from="(160,320)" to="(180,320)"/>
+    <wire from="(160,410)" to="(690,410)"/>
+    <wire from="(210,320)" to="(220,320)"/>
+    <wire from="(220,110)" to="(220,320)"/>
+    <wire from="(240,300)" to="(270,300)"/>
+    <wire from="(270,280)" to="(270,300)"/>
+    <wire from="(270,280)" to="(290,280)"/>
+    <wire from="(280,190)" to="(280,320)"/>
+    <wire from="(280,320)" to="(290,320)"/>
+    <wire from="(320,320)" to="(330,320)"/>
+    <wire from="(330,110)" to="(330,320)"/>
+    <wire from="(350,300)" to="(380,300)"/>
+    <wire from="(380,280)" to="(380,300)"/>
+    <wire from="(380,280)" to="(400,280)"/>
+    <wire from="(390,320)" to="(400,320)"/>
+    <wire from="(430,320)" to="(440,320)"/>
+    <wire from="(440,110)" to="(440,320)"/>
+    <wire from="(460,300)" to="(490,300)"/>
+    <wire from="(520,260)" to="(530,260)"/>
+    <wire from="(530,260)" to="(530,270)"/>
+    <wire from="(570,300)" to="(600,300)"/>
+    <wire from="(600,230)" to="(600,300)"/>
+    <wire from="(600,300)" to="(600,350)"/>
+    <wire from="(600,300)" to="(730,300)"/>
+    <wire from="(600,350)" to="(610,350)"/>
+    <wire from="(680,350)" to="(690,350)"/>
+    <wire from="(690,350)" to="(690,410)"/>
   </circuit>
 </project>
