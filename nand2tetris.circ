@@ -3098,4 +3098,53 @@
     <wire from="(590,500)" to="(590,800)"/>
     <wire from="(650,470)" to="(680,470)"/>
   </circuit>
+  <circuit name="RAM64BuiltIn">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="RAM64BuiltIn"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <polyline fill="none" points="129,160 140,150" stroke="#000000"/>
+      <rect fill="none" height="60" rx="10" ry="10" stroke="#000000" width="80" x="100" y="100"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="10" text-anchor="middle" x="140" y="131">RAM64</text>
+      <polyline fill="none" points="140,150 150,160" stroke="#000000"/>
+      <circ-anchor facing="east" x="180" y="130"/>
+      <circ-port dir="in" pin="180,260" x="140" y="100"/>
+      <circ-port dir="in" pin="200,220" x="100" y="140"/>
+      <circ-port dir="in" pin="250,300" x="100" y="120"/>
+      <circ-port dir="out" pin="580,300" x="180" y="130"/>
+    </appear>
+    <comp lib="0" loc="(180,260)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="load"/>
+    </comp>
+    <comp lib="0" loc="(200,220)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="address"/>
+      <a name="width" val="6"/>
+    </comp>
+    <comp lib="0" loc="(250,300)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="in16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(300,280)" name="Clock"/>
+    <comp lib="0" loc="(580,300)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="out16"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="4" loc="(300,210)" name="RAM">
+      <a name="addrWidth" val="6"/>
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="dataWidth" val="16"/>
+      <a name="enables" val="line"/>
+    </comp>
+    <wire from="(180,260)" to="(300,260)"/>
+    <wire from="(200,220)" to="(300,220)"/>
+    <wire from="(250,300)" to="(300,300)"/>
+    <wire from="(540,300)" to="(580,300)"/>
+  </circuit>
 </project>
