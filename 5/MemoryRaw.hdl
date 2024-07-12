@@ -25,12 +25,16 @@ CHIP Memory {
     OUT out[16];
 
     PARTS:
-	DMux(in = load, sel = address[14], a = loadRAM, b = loadScreen);
+	DMux(in = load, sel = address[14], a = loadRAM, b = dmux1);
+	DMux(in = dmux1, sel = address[12], a = dmux2, b = loadScreen2);
+	DMux(in = dmux2, sel = address[13], a = loadScreen1, b = loadKeyboard);
 
 	RAM16K(in = in, load = loadRAM, address = address[0..13], out = outRAM);
-	Screen(in = in, load = loadScreen, address = address[0..12], out = outScreen);
-	Keyboard(out = outKeyboard);
+	RAM4K(in = in, load = loadScreen1, address = address[0..11], out = outScreen1);
+	RAM4K(in = in, load = loadScreen2, address = address[0..11], out = outScreen2);
+	Register(in = in, load = loadKeyboard, out = outKeyboard);
 
-	Mux16(a = outScreen, b = outKeyboard, sel = address[13], out = mux1);
-	Mux16(a = outRAM, b = mux1, sel = address[14], out = out);
+	Mux16(a = outScreen1, b = outScreen2, sel = address[12], out = mux1);
+	Mux16(a = mux1, b = outKeyboard, sel = address[13], out = mux2);
+	Mux16(a = outRAM, b = mux2, sel = address[14], out = out);
 }
