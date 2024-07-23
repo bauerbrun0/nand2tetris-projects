@@ -32,5 +32,68 @@ CHIP CPU {
         pc[15];          // address of next instruction
 
     PARTS:
-	//// Replace this comment with your code.
+	Nand(a=instruction[15], b=instruction[5], out=isCNandDestA);
+	// if C instruction and destination is A, then mux out is ALU out
+	Mux16(a=outALU, b=instruction, sel=isCNandDestA, out=muxAinOut);
+
+	Not(in=instruction[15], out=isA);
+	Or(a=isA, b=instruction[5], out=regALoad);
+	// load if instruction is an A instruction or destination is register A
+	ARegister(in=muxAinOut, load=regALoad, out=regAOut, out[0..14]=addressM);
+
+	// check if ALU y should be fed from register A or inM
+	Mux16(a=regAOut, b=inM, sel=instruction[12], out=y);
+
+	And(a=instruction[15], b=instruction[4], out=regDLoad);
+	DRegister(in=outALU, load=regDLoad, out=regDOut);
+
+	ALU(x=regDOut, y=y, zx=instruction[11], nx=instruction[10], zy=instruction[9], ny=instruction[8], f=instruction[7], no=instruction[6], out=outALU, out=outM, zr=zr, ng=ng);
+	And(a=instruction[15], b=instruction[3], out=writeM);
+
+	// comparisons
+	Not(in=zr, out=notZr);
+	Not(in=ng, out=notNg);
+
+	And(a=notZr, b=notNg, out=GT);
+	// zr == EQ
+	Or(a=zr, b=notNg, out=GE);
+	And(a=notZr, b=ng, out=LT);
+	// notZr == NE
+	Or(a=zr, b=ng, out=LE);
+
+	// jump bits
+	Not(in=instruction[0], out=notJ0);
+	Not(in=instruction[1], out=notJ1);
+	Not(in=instruction[2], out=notJ2);
+
+	And(a=instruction[0], b=notJ1, out=J0AndNotJ1);
+	And(a=J0AndNotJ1, b=notJ2, out=JGT);
+
+	And(a=notJ0, b=instruction[1], out=notJ0AndJ1);
+	And(a=notJ0AndJ1, b=notJ2, out=JEQ);
+
+	And(a=instruction[0], b=instruction[1], out=J0AndJ1);
+	And(a=J0AndJ1, b=notJ2, out=JGE);
+
+	And(a=notJ0, b=notJ1, out=notJ0AndNotJ1);
+	And(a=notJ0AndNotJ1, b=instruction[2], out=JLT);
+
+	And(a=J0AndNotJ1, b=instruction[2], out=JNE);
+
+	And(a=notJ0AndJ1, b=instruction[2], out=JLE);
+
+	And(a=J0AndJ1, b = instruction[2], out=JMP);
+
+	// jumps
+	And(a=JGT, b=GT, out=JJGT);
+	And(a=JEQ, b=zr, out=JJEQ);
+	And(a=JGE, b=GE, out=JJGE);
+	And(a=JLT, b=LT, out=JJLT);
+	And(a=JNE, b=notZr, out=JJNE);
+	And(a=JLE, b=LE, out=JJLE);
+
+	Or8Way(in[0]=JJGT, in[1]=JJEQ, in[2]=JJGE, in[3]=JJLT, in[4]=JJNE, in[5]=JJLE, in[6]=JMP, in[7]=JMP, out=JUMP);
+	And(a=JUMP, b=instruction[15], out=pcLoad);
+
+	PC(in=regAOut, load=pcLoad, inc=true, reset=reset, out[0..14]=pc);
 }
