@@ -10036,7 +10036,7 @@ ea87
       <a name="font" val="SansSerif bold 12"/>
       <a name="text" val="2XSYSCLK"/>
     </comp>
-    <comp loc="(490,220)" name="CPU"/>
+    <comp loc="(490,220)" name="CPUBuiltIn"/>
     <comp loc="(750,220)" name="MemoryWithIO"/>
     <wire from="(160,100)" to="(170,100)"/>
     <wire from="(170,100)" to="(170,150)"/>
@@ -10456,7 +10456,7 @@ ea87
     <wire from="(930,450)" to="(980,450)"/>
   </circuit>
   <circuit name="CPUBuiltIn">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="CPUBuiltIn"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1024000.0"/>
