@@ -4557,7 +4557,6 @@
       <circ-port dir="out" pin="340,990" x="210" y="130"/>
       <circ-port dir="out" pin="370,600" x="210" y="210"/>
       <circ-port dir="out" pin="850,430" x="210" y="170"/>
-      <circ-port dir="out" pin="970,600" x="210" y="220"/>
     </appear>
     <comp lib="0" loc="(1050,620)" name="Tunnel">
       <a name="label" val="bit"/>
@@ -4665,13 +4664,6 @@
     </comp>
     <comp lib="0" loc="(880,640)" name="Constant">
       <a name="value" val="0x0"/>
-      <a name="width" val="4"/>
-    </comp>
-    <comp lib="0" loc="(970,600)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="radix" val="10unsigned"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="1" loc="(1180,670)" name="AND Gate">
@@ -4876,9 +4868,7 @@
     <wire from="(890,560)" to="(890,630)"/>
     <wire from="(890,630)" to="(930,630)"/>
     <wire from="(940,660)" to="(940,690)"/>
-    <wire from="(960,640)" to="(970,640)"/>
-    <wire from="(970,600)" to="(970,640)"/>
-    <wire from="(970,640)" to="(1020,640)"/>
+    <wire from="(960,640)" to="(1020,640)"/>
   </circuit>
   <circuit name="VideoCard512x256Test">
     <a name="appearance" val="logisim_evolution"/>
@@ -10048,7 +10038,7 @@
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 15 16
 0 fc10 17 e306 10 e308 4000 ec10
-11 e308 11 fc20 ee88 11 fc10 20
+11 e308 11 fc20 ee88 11 fc10 8
 e090 11 e308 10 fc98 a e301 17
 ea87
 </a>
@@ -11487,5 +11477,75 @@ ea87
     <wire from="(960,940)" to="(990,940)"/>
     <wire from="(960,970)" to="(990,970)"/>
     <wire from="(960,990)" to="(990,990)"/>
+  </circuit>
+  <circuit name="Computer128x128">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Computer128x128"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="2048000.0"/>
+    <comp lib="0" loc="(120,950)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="reset"/>
+    </comp>
+    <comp lib="0" loc="(410,940)" name="Tunnel">
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(550,960)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(660,710)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(720,730)" name="Constant"/>
+    <comp lib="0" loc="(880,880)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+    </comp>
+    <comp lib="5" loc="(740,650)" name="RGB Video">
+      <a name="color" val="8-Color RGB (3 bit)"/>
+      <a name="cursor" val="No Cursor"/>
+    </comp>
+    <comp loc="(380,880)" name="Computer"/>
+    <comp loc="(680,880)" name="VideoCard128x128"/>
+    <wire from="(120,950)" to="(170,950)"/>
+    <wire from="(170,690)" to="(170,950)"/>
+    <wire from="(170,690)" to="(740,690)"/>
+    <wire from="(170,950)" to="(250,950)"/>
+    <wire from="(220,1010)" to="(750,1010)"/>
+    <wire from="(220,880)" to="(220,1010)"/>
+    <wire from="(220,880)" to="(250,880)"/>
+    <wire from="(380,880)" to="(540,880)"/>
+    <wire from="(380,940)" to="(410,940)"/>
+    <wire from="(550,960)" to="(610,960)"/>
+    <wire from="(610,930)" to="(610,960)"/>
+    <wire from="(660,710)" to="(750,710)"/>
+    <wire from="(680,840)" to="(940,840)"/>
+    <wire from="(680,860)" to="(950,860)"/>
+    <wire from="(680,880)" to="(840,880)"/>
+    <wire from="(680,920)" to="(750,920)"/>
+    <wire from="(720,730)" to="(760,730)"/>
+    <wire from="(740,650)" to="(740,690)"/>
+    <wire from="(750,650)" to="(750,710)"/>
+    <wire from="(750,920)" to="(750,1010)"/>
+    <wire from="(760,650)" to="(760,730)"/>
+    <wire from="(780,650)" to="(780,740)"/>
+    <wire from="(780,740)" to="(940,740)"/>
+    <wire from="(790,650)" to="(790,730)"/>
+    <wire from="(790,730)" to="(950,730)"/>
+    <wire from="(800,650)" to="(800,720)"/>
+    <wire from="(800,720)" to="(960,720)"/>
+    <wire from="(840,870)" to="(840,880)"/>
+    <wire from="(840,870)" to="(860,870)"/>
+    <wire from="(840,880)" to="(840,890)"/>
+    <wire from="(840,880)" to="(860,880)"/>
+    <wire from="(840,890)" to="(860,890)"/>
+    <wire from="(880,880)" to="(960,880)"/>
+    <wire from="(940,740)" to="(940,840)"/>
+    <wire from="(950,730)" to="(950,860)"/>
+    <wire from="(960,720)" to="(960,880)"/>
   </circuit>
 </project>
