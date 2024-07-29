@@ -4207,7 +4207,7 @@
     <a name="appearance" val="custom"/>
     <a name="circuit" val="VideoCard512x256"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="256.0"/>
+    <a name="simulationFrequency" val="1.0"/>
     <appear>
       <rect fill="none" height="100" stroke="#000000" width="140" x="50" y="40"/>
       <polyline fill="none" points="109,140 120,130" stroke="#000000"/>
@@ -4215,6 +4215,7 @@
       <text dominant-baseline="central" font-family="SansSerif" font-size="10" text-anchor="middle" x="122" y="79">Video Card</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="10" text-anchor="middle" x="122" y="94">512x256</text>
       <circ-anchor facing="east" x="190" y="90"/>
+      <circ-port dir="in" pin="190,280" x="50" y="130"/>
       <circ-port dir="in" pin="190,340" x="120" y="140"/>
       <circ-port dir="in" pin="260,430" x="50" y="90"/>
       <circ-port dir="out" pin="340,1260" x="190" y="70"/>
@@ -4243,6 +4244,10 @@
       <a name="facing" val="east"/>
       <a name="label" val="clk"/>
     </comp>
+    <comp lib="0" loc="(190,280)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="reset"/>
+    </comp>
     <comp lib="0" loc="(190,340)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="clk"/>
@@ -4263,6 +4268,24 @@
       <a name="appearance" val="NewPins"/>
       <a name="label" val="inM"/>
       <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(270,1070)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="reset"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(270,690)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="reset"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(310,1330)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="reset"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(310,280)" name="Tunnel">
+      <a name="label" val="reset"/>
     </comp>
     <comp lib="0" loc="(310,340)" name="Tunnel">
       <a name="label" val="clk"/>
@@ -4329,6 +4352,11 @@
     <comp lib="0" loc="(880,640)" name="Constant">
       <a name="value" val="0x0"/>
       <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(950,700)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="reset"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
     </comp>
     <comp lib="1" loc="(1180,670)" name="AND Gate">
       <a name="inputs" val="4"/>
@@ -4425,6 +4453,7 @@
     <wire from="(180,1390)" to="(200,1390)"/>
     <wire from="(180,1410)" to="(200,1410)"/>
     <wire from="(190,1060)" to="(230,1060)"/>
+    <wire from="(190,280)" to="(310,280)"/>
     <wire from="(190,340)" to="(310,340)"/>
     <wire from="(210,640)" to="(250,640)"/>
     <wire from="(220,1000)" to="(250,1000)"/>
@@ -4454,6 +4483,9 @@
     <wire from="(260,1370)" to="(280,1370)"/>
     <wire from="(260,430)" to="(530,430)"/>
     <wire from="(260,660)" to="(260,680)"/>
+    <wire from="(270,1030)" to="(270,1070)"/>
+    <wire from="(270,1300)" to="(310,1300)"/>
+    <wire from="(270,660)" to="(270,690)"/>
     <wire from="(280,1010)" to="(310,1010)"/>
     <wire from="(280,1280)" to="(310,1280)"/>
     <wire from="(280,1310)" to="(280,1370)"/>
@@ -4462,6 +4494,7 @@
     <wire from="(310,1260)" to="(310,1280)"/>
     <wire from="(310,1260)" to="(340,1260)"/>
     <wire from="(310,1280)" to="(370,1280)"/>
+    <wire from="(310,1300)" to="(310,1330)"/>
     <wire from="(310,990)" to="(310,1010)"/>
     <wire from="(310,990)" to="(340,990)"/>
     <wire from="(340,600)" to="(340,640)"/>
@@ -4537,6 +4570,7 @@
     <wire from="(890,560)" to="(890,630)"/>
     <wire from="(890,630)" to="(930,630)"/>
     <wire from="(940,660)" to="(940,690)"/>
+    <wire from="(950,660)" to="(950,700)"/>
     <wire from="(960,640)" to="(1020,640)"/>
   </circuit>
   <circuit name="VideoCard128x128">
@@ -4551,6 +4585,7 @@
       <polyline fill="none" points="140,210 151,220" stroke="#000000"/>
       <text dominant-baseline="central" font-family="SansSerif" font-size="10" text-anchor="middle" x="142" y="175">128x128</text>
       <circ-anchor facing="east" x="210" y="170"/>
+      <circ-port dir="in" pin="190,280" x="70" y="210"/>
       <circ-port dir="in" pin="190,340" x="140" y="220"/>
       <circ-port dir="in" pin="260,430" x="70" y="170"/>
       <circ-port dir="out" pin="340,1260" x="210" y="150"/>
@@ -4579,6 +4614,10 @@
       <a name="facing" val="east"/>
       <a name="label" val="clk"/>
     </comp>
+    <comp lib="0" loc="(190,280)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="reset"/>
+    </comp>
     <comp lib="0" loc="(190,340)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="clk"/>
@@ -4599,6 +4638,24 @@
       <a name="appearance" val="NewPins"/>
       <a name="label" val="inM"/>
       <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(270,1070)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="reset"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(270,690)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="reset"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(310,1330)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="reset"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(310,280)" name="Tunnel">
+      <a name="label" val="reset"/>
     </comp>
     <comp lib="0" loc="(310,340)" name="Tunnel">
       <a name="label" val="clk"/>
@@ -4665,6 +4722,11 @@
     <comp lib="0" loc="(880,640)" name="Constant">
       <a name="value" val="0x0"/>
       <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(950,700)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="reset"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
     </comp>
     <comp lib="1" loc="(1180,670)" name="AND Gate">
       <a name="inputs" val="4"/>
@@ -4759,6 +4821,7 @@
     <wire from="(180,1390)" to="(200,1390)"/>
     <wire from="(180,1410)" to="(200,1410)"/>
     <wire from="(190,1060)" to="(230,1060)"/>
+    <wire from="(190,280)" to="(310,280)"/>
     <wire from="(190,340)" to="(310,340)"/>
     <wire from="(200,640)" to="(250,640)"/>
     <wire from="(220,1000)" to="(250,1000)"/>
@@ -4787,6 +4850,10 @@
     <wire from="(260,1370)" to="(280,1370)"/>
     <wire from="(260,430)" to="(530,430)"/>
     <wire from="(260,660)" to="(260,690)"/>
+    <wire from="(270,1030)" to="(270,1070)"/>
+    <wire from="(270,1300)" to="(270,1310)"/>
+    <wire from="(270,1310)" to="(310,1310)"/>
+    <wire from="(270,660)" to="(270,690)"/>
     <wire from="(280,1010)" to="(310,1010)"/>
     <wire from="(280,1280)" to="(310,1280)"/>
     <wire from="(280,1320)" to="(280,1370)"/>
@@ -4795,6 +4862,7 @@
     <wire from="(310,1260)" to="(310,1280)"/>
     <wire from="(310,1260)" to="(340,1260)"/>
     <wire from="(310,1280)" to="(370,1280)"/>
+    <wire from="(310,1310)" to="(310,1330)"/>
     <wire from="(310,990)" to="(310,1010)"/>
     <wire from="(310,990)" to="(340,990)"/>
     <wire from="(340,600)" to="(340,640)"/>
@@ -4868,6 +4936,7 @@
     <wire from="(890,560)" to="(890,630)"/>
     <wire from="(890,630)" to="(930,630)"/>
     <wire from="(940,660)" to="(940,690)"/>
+    <wire from="(950,660)" to="(950,700)"/>
     <wire from="(960,640)" to="(1020,640)"/>
   </circuit>
   <circuit name="VideoCard512x256Test">
@@ -11379,11 +11448,11 @@ ea87
     <a name="circuit" val="Computer128x128"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="2048000.0"/>
-    <comp lib="0" loc="(180,1290)" name="Pin">
+    <comp lib="0" loc="(100,750)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="reset"/>
     </comp>
-    <comp lib="0" loc="(200,1260)" name="Tunnel">
+    <comp lib="0" loc="(150,750)" name="Tunnel">
       <a name="label" val="reset"/>
     </comp>
     <comp lib="0" loc="(240,850)" name="Splitter">
@@ -11423,6 +11492,10 @@ ea87
       <a name="fanout" val="14"/>
       <a name="incoming" val="14"/>
       <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(270,1290)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="reset"/>
     </comp>
     <comp lib="0" loc="(280,1010)" name="Splitter">
       <a name="bit0" val="10"/>
@@ -11508,6 +11581,10 @@ ea87
       <a name="fanout" val="3"/>
       <a name="incoming" val="3"/>
       <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(590,1260)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="reset"/>
     </comp>
     <comp lib="0" loc="(590,890)" name="Splitter">
       <a name="bit0" val="2"/>
@@ -12450,13 +12527,10 @@ ea87
     <comp loc="(440,1220)" name="Computer"/>
     <comp loc="(560,710)" name="KBDEncoder"/>
     <comp loc="(740,1220)" name="VideoCard128x128"/>
+    <wire from="(100,750)" to="(150,750)"/>
     <wire from="(1000,660)" to="(1000,1180)"/>
     <wire from="(1010,650)" to="(1010,1200)"/>
     <wire from="(1020,640)" to="(1020,1220)"/>
-    <wire from="(180,1290)" to="(190,1290)"/>
-    <wire from="(190,1260)" to="(190,1290)"/>
-    <wire from="(190,1260)" to="(200,1260)"/>
-    <wire from="(190,1290)" to="(310,1290)"/>
     <wire from="(200,1010)" to="(280,1010)"/>
     <wire from="(200,790)" to="(200,1010)"/>
     <wire from="(200,790)" to="(470,790)"/>
@@ -12471,6 +12545,7 @@ ea87
     <wire from="(230,890)" to="(240,890)"/>
     <wire from="(240,830)" to="(240,850)"/>
     <wire from="(240,830)" to="(510,830)"/>
+    <wire from="(270,1290)" to="(310,1290)"/>
     <wire from="(280,1220)" to="(280,1350)"/>
     <wire from="(280,1220)" to="(310,1220)"/>
     <wire from="(280,1350)" to="(810,1350)"/>
@@ -12506,6 +12581,7 @@ ea87
     <wire from="(580,780)" to="(580,980)"/>
     <wire from="(580,980)" to="(620,980)"/>
     <wire from="(590,1010)" to="(650,1010)"/>
+    <wire from="(590,1260)" to="(600,1260)"/>
     <wire from="(590,780)" to="(590,840)"/>
     <wire from="(590,840)" to="(650,840)"/>
     <wire from="(620,780)" to="(620,830)"/>
@@ -12540,9 +12616,13 @@ ea87
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="Computer512x256"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="2048000.0"/>
+    <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(100,640)" name="Tunnel">
       <a name="facing" val="east"/>
+      <a name="label" val="reset"/>
+    </comp>
+    <comp lib="0" loc="(100,750)" name="Pin">
+      <a name="appearance" val="NewPins"/>
       <a name="label" val="reset"/>
     </comp>
     <comp lib="0" loc="(1160,640)" name="Splitter">
@@ -12560,11 +12640,7 @@ ea87
       <a name="facing" val="north"/>
       <a name="label" val="clk"/>
     </comp>
-    <comp lib="0" loc="(180,1290)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="reset"/>
-    </comp>
-    <comp lib="0" loc="(200,1260)" name="Tunnel">
+    <comp lib="0" loc="(150,750)" name="Tunnel">
       <a name="label" val="reset"/>
     </comp>
     <comp lib="0" loc="(240,850)" name="Splitter">
@@ -12604,6 +12680,10 @@ ea87
       <a name="fanout" val="14"/>
       <a name="incoming" val="14"/>
       <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(270,1290)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="reset"/>
     </comp>
     <comp lib="0" loc="(280,1010)" name="Splitter">
       <a name="bit0" val="10"/>
@@ -12678,6 +12758,10 @@ ea87
       <a name="fanout" val="3"/>
       <a name="incoming" val="3"/>
       <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(590,1260)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="reset"/>
     </comp>
     <comp lib="0" loc="(590,890)" name="Splitter">
       <a name="bit0" val="2"/>
@@ -13640,6 +13724,7 @@ ea87
     <comp loc="(560,710)" name="KBDEncoder"/>
     <comp loc="(740,1220)" name="VideoCard512x256"/>
     <wire from="(100,640)" to="(140,640)"/>
+    <wire from="(100,750)" to="(150,750)"/>
     <wire from="(1010,630)" to="(1010,1200)"/>
     <wire from="(1020,620)" to="(1020,1220)"/>
     <wire from="(1200,690)" to="(1200,1180)"/>
@@ -13649,12 +13734,8 @@ ea87
     <wire from="(150,610)" to="(150,650)"/>
     <wire from="(160,610)" to="(160,680)"/>
     <wire from="(160,680)" to="(200,680)"/>
-    <wire from="(180,1290)" to="(190,1290)"/>
     <wire from="(180,610)" to="(180,640)"/>
     <wire from="(180,640)" to="(700,640)"/>
-    <wire from="(190,1260)" to="(190,1290)"/>
-    <wire from="(190,1260)" to="(200,1260)"/>
-    <wire from="(190,1290)" to="(310,1290)"/>
     <wire from="(190,610)" to="(190,630)"/>
     <wire from="(190,630)" to="(710,630)"/>
     <wire from="(200,1010)" to="(280,1010)"/>
@@ -13674,6 +13755,7 @@ ea87
     <wire from="(230,890)" to="(240,890)"/>
     <wire from="(240,830)" to="(240,850)"/>
     <wire from="(240,830)" to="(510,830)"/>
+    <wire from="(270,1290)" to="(310,1290)"/>
     <wire from="(280,1220)" to="(280,1350)"/>
     <wire from="(280,1220)" to="(310,1220)"/>
     <wire from="(280,1350)" to="(810,1350)"/>
@@ -13698,6 +13780,7 @@ ea87
     <wire from="(580,780)" to="(580,980)"/>
     <wire from="(580,980)" to="(620,980)"/>
     <wire from="(590,1010)" to="(650,1010)"/>
+    <wire from="(590,1260)" to="(600,1260)"/>
     <wire from="(590,780)" to="(590,840)"/>
     <wire from="(590,840)" to="(650,840)"/>
     <wire from="(620,780)" to="(620,830)"/>
