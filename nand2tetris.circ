@@ -22,7 +22,7 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <main name="NotGate"/>
+  <main name="Computer512x256"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -10038,7 +10038,7 @@
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 15 16
 0 fc10 17 e306 10 e308 4000 ec10
-11 e308 11 fc20 ee88 11 fc10 8
+11 e308 11 fc20 ee88 11 fc10 20
 e090 11 e308 10 fc98 a e301 17
 ea87
 </a>
@@ -10100,110 +10100,6 @@ ea87
     <wire from="(800,430)" to="(810,430)"/>
     <wire from="(800,470)" to="(800,490)"/>
     <wire from="(800,490)" to="(830,490)"/>
-  </circuit>
-  <circuit name="Computer512x256">
-    <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="Computer512x256"/>
-    <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="2048000.0"/>
-    <comp lib="0" loc="(1170,750)" name="Splitter">
-      <a name="appear" val="center"/>
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(1210,800)" name="Splitter">
-      <a name="appear" val="right"/>
-      <a name="facing" val="west"/>
-      <a name="fanout" val="9"/>
-      <a name="incoming" val="9"/>
-    </comp>
-    <comp lib="0" loc="(150,950)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="reset"/>
-    </comp>
-    <comp lib="0" loc="(260,710)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="clk"/>
-    </comp>
-    <comp lib="0" loc="(420,940)" name="Tunnel">
-      <a name="label" val="clk"/>
-    </comp>
-    <comp lib="0" loc="(550,960)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="clk"/>
-    </comp>
-    <comp lib="0" loc="(880,880)" name="Splitter">
-      <a name="appear" val="center"/>
-      <a name="facing" val="west"/>
-      <a name="fanout" val="3"/>
-      <a name="incoming" val="3"/>
-    </comp>
-    <comp lib="1" loc="(420,790)" name="NOT Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="5" loc="(380,680)" name="RGB Video">
-      <a name="color" val="8-Color RGB (3 bit)"/>
-      <a name="cursor" val="No Cursor"/>
-      <a name="height" val="256"/>
-      <a name="width" val="256"/>
-    </comp>
-    <comp lib="5" loc="(900,680)" name="RGB Video">
-      <a name="color" val="8-Color RGB (3 bit)"/>
-      <a name="cursor" val="No Cursor"/>
-      <a name="height" val="256"/>
-      <a name="width" val="256"/>
-    </comp>
-    <comp loc="(370,880)" name="Computer"/>
-    <comp loc="(680,880)" name="VideoCard512x256"/>
-    <wire from="(1010,730)" to="(1010,860)"/>
-    <wire from="(1170,740)" to="(1170,750)"/>
-    <wire from="(1210,800)" to="(1210,840)"/>
-    <wire from="(150,950)" to="(180,950)"/>
-    <wire from="(180,690)" to="(180,950)"/>
-    <wire from="(180,690)" to="(380,690)"/>
-    <wire from="(180,950)" to="(240,950)"/>
-    <wire from="(210,1040)" to="(760,1040)"/>
-    <wire from="(210,880)" to="(210,1040)"/>
-    <wire from="(210,880)" to="(240,880)"/>
-    <wire from="(260,710)" to="(390,710)"/>
-    <wire from="(370,880)" to="(540,880)"/>
-    <wire from="(370,940)" to="(420,940)"/>
-    <wire from="(380,680)" to="(380,690)"/>
-    <wire from="(380,690)" to="(900,690)"/>
-    <wire from="(390,680)" to="(390,710)"/>
-    <wire from="(390,710)" to="(910,710)"/>
-    <wire from="(400,680)" to="(400,790)"/>
-    <wire from="(400,790)" to="(420,790)"/>
-    <wire from="(420,680)" to="(420,740)"/>
-    <wire from="(420,740)" to="(940,740)"/>
-    <wire from="(430,680)" to="(430,730)"/>
-    <wire from="(430,730)" to="(950,730)"/>
-    <wire from="(440,680)" to="(440,720)"/>
-    <wire from="(440,720)" to="(960,720)"/>
-    <wire from="(450,790)" to="(920,790)"/>
-    <wire from="(550,960)" to="(610,960)"/>
-    <wire from="(610,930)" to="(610,960)"/>
-    <wire from="(680,840)" to="(1210,840)"/>
-    <wire from="(680,860)" to="(1010,860)"/>
-    <wire from="(680,880)" to="(840,880)"/>
-    <wire from="(680,910)" to="(760,910)"/>
-    <wire from="(760,910)" to="(760,1040)"/>
-    <wire from="(840,870)" to="(840,880)"/>
-    <wire from="(840,870)" to="(860,870)"/>
-    <wire from="(840,880)" to="(840,890)"/>
-    <wire from="(840,880)" to="(860,880)"/>
-    <wire from="(840,890)" to="(860,890)"/>
-    <wire from="(880,880)" to="(960,880)"/>
-    <wire from="(900,680)" to="(900,690)"/>
-    <wire from="(910,680)" to="(910,710)"/>
-    <wire from="(920,680)" to="(920,790)"/>
-    <wire from="(920,790)" to="(1190,790)"/>
-    <wire from="(940,680)" to="(940,740)"/>
-    <wire from="(940,740)" to="(1170,740)"/>
-    <wire from="(950,680)" to="(950,730)"/>
-    <wire from="(950,730)" to="(1010,730)"/>
-    <wire from="(960,680)" to="(960,720)"/>
-    <wire from="(960,720)" to="(960,880)"/>
   </circuit>
   <circuit name="ALUBuiltIn">
     <a name="appearance" val="custom"/>
@@ -11483,69 +11379,2366 @@ ea87
     <a name="circuit" val="Computer128x128"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="2048000.0"/>
-    <comp lib="0" loc="(120,950)" name="Pin">
+    <comp lib="0" loc="(180,1290)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="reset"/>
     </comp>
-    <comp lib="0" loc="(410,940)" name="Tunnel">
-      <a name="label" val="clk"/>
+    <comp lib="0" loc="(200,1260)" name="Tunnel">
+      <a name="label" val="reset"/>
     </comp>
-    <comp lib="0" loc="(550,960)" name="Tunnel">
+    <comp lib="0" loc="(240,850)" name="Splitter">
+      <a name="bit0" val="12"/>
+      <a name="bit1" val="11"/>
+      <a name="bit10" val="2"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="0"/>
+      <a name="bit2" val="10"/>
+      <a name="bit3" val="9"/>
+      <a name="bit4" val="8"/>
+      <a name="bit5" val="7"/>
+      <a name="bit7" val="5"/>
+      <a name="bit8" val="4"/>
+      <a name="bit9" val="3"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="13"/>
+      <a name="incoming" val="13"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(240,890)" name="Splitter">
+      <a name="bit0" val="13"/>
+      <a name="bit1" val="12"/>
+      <a name="bit10" val="3"/>
+      <a name="bit11" val="2"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="0"/>
+      <a name="bit2" val="11"/>
+      <a name="bit3" val="10"/>
+      <a name="bit4" val="9"/>
+      <a name="bit5" val="8"/>
+      <a name="bit6" val="7"/>
+      <a name="bit7" val="6"/>
+      <a name="bit8" val="5"/>
+      <a name="bit9" val="4"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="14"/>
+      <a name="incoming" val="14"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(280,1010)" name="Splitter">
+      <a name="bit0" val="10"/>
+      <a name="bit1" val="9"/>
+      <a name="bit10" val="0"/>
+      <a name="bit2" val="8"/>
+      <a name="bit3" val="7"/>
+      <a name="bit4" val="6"/>
+      <a name="bit6" val="4"/>
+      <a name="bit7" val="3"/>
+      <a name="bit8" val="2"/>
+      <a name="bit9" val="1"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="11"/>
+      <a name="incoming" val="11"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(280,930)" name="Splitter">
+      <a name="bit0" val="11"/>
+      <a name="bit1" val="10"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="0"/>
+      <a name="bit2" val="9"/>
+      <a name="bit3" val="8"/>
+      <a name="bit4" val="7"/>
+      <a name="bit5" val="6"/>
+      <a name="bit6" val="5"/>
+      <a name="bit7" val="4"/>
+      <a name="bit8" val="3"/>
+      <a name="bit9" val="2"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="12"/>
+      <a name="incoming" val="12"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(290,1160)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="clk"/>
+      <a name="label" val="kbd"/>
+      <a name="width" val="16"/>
     </comp>
-    <comp lib="0" loc="(660,710)" name="Tunnel">
+    <comp lib="0" loc="(290,1190)" name="Constant"/>
+    <comp lib="0" loc="(290,970)" name="Splitter">
+      <a name="bit0" val="11"/>
+      <a name="bit1" val="10"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="0"/>
+      <a name="bit2" val="9"/>
+      <a name="bit3" val="8"/>
+      <a name="bit4" val="7"/>
+      <a name="bit5" val="6"/>
+      <a name="bit6" val="5"/>
+      <a name="bit7" val="4"/>
+      <a name="bit8" val="3"/>
+      <a name="bit9" val="2"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="12"/>
+      <a name="incoming" val="12"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(440,650)" name="Tunnel">
       <a name="facing" val="east"/>
+      <a name="label" val="reset"/>
+    </comp>
+    <comp lib="0" loc="(460,1280)" name="Tunnel">
       <a name="label" val="clk"/>
     </comp>
-    <comp lib="0" loc="(720,730)" name="Constant"/>
-    <comp lib="0" loc="(880,880)" name="Splitter">
+    <comp lib="0" loc="(460,660)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(470,620)" name="Constant">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(560,700)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="kbd"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(590,1010)" name="Splitter">
+      <a name="bit0" val="2"/>
+      <a name="bit2" val="0"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(590,890)" name="Splitter">
+      <a name="bit0" val="2"/>
+      <a name="bit2" val="0"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(590,930)" name="Splitter">
+      <a name="bit0" val="2"/>
+      <a name="bit2" val="0"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(670,1280)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(710,890)" name="Splitter">
+      <a name="bit0" val="10"/>
+      <a name="bit1" val="9"/>
+      <a name="bit10" val="0"/>
+      <a name="bit2" val="8"/>
+      <a name="bit3" val="7"/>
+      <a name="bit4" val="6"/>
+      <a name="bit6" val="4"/>
+      <a name="bit7" val="3"/>
+      <a name="bit8" val="2"/>
+      <a name="bit9" val="1"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="11"/>
+      <a name="incoming" val="11"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(720,1010)" name="Splitter">
+      <a name="bit0" val="10"/>
+      <a name="bit1" val="9"/>
+      <a name="bit10" val="0"/>
+      <a name="bit2" val="8"/>
+      <a name="bit3" val="7"/>
+      <a name="bit4" val="6"/>
+      <a name="bit6" val="4"/>
+      <a name="bit7" val="3"/>
+      <a name="bit8" val="2"/>
+      <a name="bit9" val="1"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="11"/>
+      <a name="incoming" val="11"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(720,930)" name="Splitter">
+      <a name="bit0" val="11"/>
+      <a name="bit1" val="10"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="0"/>
+      <a name="bit2" val="9"/>
+      <a name="bit3" val="8"/>
+      <a name="bit4" val="7"/>
+      <a name="bit5" val="6"/>
+      <a name="bit6" val="5"/>
+      <a name="bit7" val="4"/>
+      <a name="bit8" val="3"/>
+      <a name="bit9" val="2"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="12"/>
+      <a name="incoming" val="12"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(730,970)" name="Splitter">
+      <a name="bit0" val="11"/>
+      <a name="bit1" val="10"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="0"/>
+      <a name="bit2" val="9"/>
+      <a name="bit3" val="8"/>
+      <a name="bit4" val="7"/>
+      <a name="bit5" val="6"/>
+      <a name="bit6" val="5"/>
+      <a name="bit7" val="4"/>
+      <a name="bit8" val="3"/>
+      <a name="bit9" val="2"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="12"/>
+      <a name="incoming" val="12"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(860,1220)" name="Splitter">
       <a name="appear" val="center"/>
       <a name="facing" val="west"/>
       <a name="fanout" val="3"/>
       <a name="incoming" val="3"/>
     </comp>
-    <comp lib="5" loc="(740,650)" name="RGB Video">
+    <comp lib="5" loc="(250,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(250,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(270,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(270,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(290,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(290,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(290,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(290,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(300,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(310,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(310,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(310,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(310,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(320,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(330,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(330,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(330,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(330,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(340,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(350,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(350,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(350,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(350,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(360,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(370,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(370,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(370,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(370,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(380,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(390,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(390,1070)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(390,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(390,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(390,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(400,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(410,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(410,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(410,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(410,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(420,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(430,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(430,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(430,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(430,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(440,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(450,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(450,610)" name="RGB Video">
       <a name="color" val="8-Color RGB (3 bit)"/>
       <a name="cursor" val="No Cursor"/>
     </comp>
-    <comp loc="(380,880)" name="Computer"/>
-    <comp loc="(680,880)" name="VideoCard128x128"/>
-    <wire from="(120,950)" to="(170,950)"/>
-    <wire from="(170,690)" to="(170,950)"/>
-    <wire from="(170,690)" to="(740,690)"/>
-    <wire from="(170,950)" to="(250,950)"/>
-    <wire from="(220,1010)" to="(750,1010)"/>
-    <wire from="(220,880)" to="(220,1010)"/>
-    <wire from="(220,880)" to="(250,880)"/>
-    <wire from="(380,880)" to="(540,880)"/>
-    <wire from="(380,940)" to="(410,940)"/>
-    <wire from="(550,960)" to="(610,960)"/>
-    <wire from="(610,930)" to="(610,960)"/>
-    <wire from="(660,710)" to="(750,710)"/>
-    <wire from="(680,840)" to="(940,840)"/>
-    <wire from="(680,860)" to="(950,860)"/>
-    <wire from="(680,880)" to="(840,880)"/>
-    <wire from="(680,920)" to="(750,920)"/>
-    <wire from="(720,730)" to="(760,730)"/>
-    <wire from="(740,650)" to="(740,690)"/>
-    <wire from="(750,650)" to="(750,710)"/>
-    <wire from="(750,920)" to="(750,1010)"/>
-    <wire from="(760,650)" to="(760,730)"/>
-    <wire from="(780,650)" to="(780,740)"/>
-    <wire from="(780,740)" to="(940,740)"/>
-    <wire from="(790,650)" to="(790,730)"/>
-    <wire from="(790,730)" to="(950,730)"/>
-    <wire from="(800,650)" to="(800,720)"/>
-    <wire from="(800,720)" to="(960,720)"/>
-    <wire from="(840,870)" to="(840,880)"/>
-    <wire from="(840,870)" to="(860,870)"/>
-    <wire from="(840,880)" to="(840,890)"/>
-    <wire from="(840,880)" to="(860,880)"/>
-    <wire from="(840,890)" to="(860,890)"/>
-    <wire from="(880,880)" to="(960,880)"/>
-    <wire from="(940,740)" to="(940,840)"/>
-    <wire from="(950,730)" to="(950,860)"/>
-    <wire from="(960,720)" to="(960,880)"/>
+    <comp lib="5" loc="(450,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(450,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(450,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(460,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(470,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(470,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(470,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(470,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(480,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(490,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(490,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(490,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(490,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(500,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(510,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(510,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(520,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(560,970)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(600,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(600,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(600,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(620,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(620,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(620,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(620,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(640,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(640,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(640,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(720,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(730,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(730,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(740,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(740,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(750,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(750,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(760,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(760,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(770,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(770,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(780,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(780,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(790,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(790,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(800,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(800,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(810,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(810,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(820,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(820,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(830,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(830,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(840,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(840,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(850,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(850,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(860,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(860,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(870,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(870,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(880,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(880,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(890,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(890,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(900,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(900,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(910,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(910,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(920,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(920,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(930,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(930,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(940,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(950,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(960,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="8" loc="(245,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="esc"/>
+    </comp>
+    <comp lib="8" loc="(245,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="`"/>
+    </comp>
+    <comp lib="8" loc="(265,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f1"/>
+    </comp>
+    <comp lib="8" loc="(270,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="1"/>
+    </comp>
+    <comp lib="8" loc="(285,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="\"/>
+    </comp>
+    <comp lib="8" loc="(285,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f2"/>
+    </comp>
+    <comp lib="8" loc="(285,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="2"/>
+    </comp>
+    <comp lib="8" loc="(285,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="q"/>
+    </comp>
+    <comp lib="8" loc="(300,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="a"/>
+    </comp>
+    <comp lib="8" loc="(305,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="z"/>
+    </comp>
+    <comp lib="8" loc="(305,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f3"/>
+    </comp>
+    <comp lib="8" loc="(305,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="w"/>
+    </comp>
+    <comp lib="8" loc="(310,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="3"/>
+    </comp>
+    <comp lib="8" loc="(320,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="s"/>
+    </comp>
+    <comp lib="8" loc="(325,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="x"/>
+    </comp>
+    <comp lib="8" loc="(325,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f4"/>
+    </comp>
+    <comp lib="8" loc="(325,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="4"/>
+    </comp>
+    <comp lib="8" loc="(325,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="e"/>
+    </comp>
+    <comp lib="8" loc="(335,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="d"/>
+    </comp>
+    <comp lib="8" loc="(345,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="c"/>
+    </comp>
+    <comp lib="8" loc="(345,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f5"/>
+    </comp>
+    <comp lib="8" loc="(345,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="5"/>
+    </comp>
+    <comp lib="8" loc="(350,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="r"/>
+    </comp>
+    <comp lib="8" loc="(355,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f"/>
+    </comp>
+    <comp lib="8" loc="(365,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="v"/>
+    </comp>
+    <comp lib="8" loc="(365,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f6"/>
+    </comp>
+    <comp lib="8" loc="(365,915)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="6"/>
+    </comp>
+    <comp lib="8" loc="(365,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="t"/>
+    </comp>
+    <comp lib="8" loc="(375,995)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="g"/>
+    </comp>
+    <comp lib="8" loc="(385,1080)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="sp"/>
+    </comp>
+    <comp lib="8" loc="(385,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f7"/>
+    </comp>
+    <comp lib="8" loc="(385,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="7"/>
+    </comp>
+    <comp lib="8" loc="(390,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="b"/>
+    </comp>
+    <comp lib="8" loc="(390,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="y"/>
+    </comp>
+    <comp lib="8" loc="(395,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="h"/>
+    </comp>
+    <comp lib="8" loc="(405,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="n"/>
+    </comp>
+    <comp lib="8" loc="(405,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f8"/>
+    </comp>
+    <comp lib="8" loc="(405,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="8"/>
+    </comp>
+    <comp lib="8" loc="(405,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="u"/>
+    </comp>
+    <comp lib="8" loc="(420,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="j"/>
+    </comp>
+    <comp lib="8" loc="(425,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="m"/>
+    </comp>
+    <comp lib="8" loc="(425,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f9"/>
+    </comp>
+    <comp lib="8" loc="(425,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="i"/>
+    </comp>
+    <comp lib="8" loc="(430,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="9"/>
+    </comp>
+    <comp lib="8" loc="(440,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="k"/>
+    </comp>
+    <comp lib="8" loc="(445,1035)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val=","/>
+    </comp>
+    <comp lib="8" loc="(445,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f10"/>
+    </comp>
+    <comp lib="8" loc="(445,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="o"/>
+    </comp>
+    <comp lib="8" loc="(450,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="0"/>
+    </comp>
+    <comp lib="8" loc="(455,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="l"/>
+    </comp>
+    <comp lib="8" loc="(465,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f11"/>
+    </comp>
+    <comp lib="8" loc="(465,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="-"/>
+    </comp>
+    <comp lib="8" loc="(465,955)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="p"/>
+    </comp>
+    <comp lib="8" loc="(470,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="."/>
+    </comp>
+    <comp lib="8" loc="(475,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val=";"/>
+    </comp>
+    <comp lib="8" loc="(485,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="/"/>
+    </comp>
+    <comp lib="8" loc="(485,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f12"/>
+    </comp>
+    <comp lib="8" loc="(485,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="="/>
+    </comp>
+    <comp lib="8" loc="(490,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="["/>
+    </comp>
+    <comp lib="8" loc="(495,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="'"/>
+    </comp>
+    <comp lib="8" loc="(505,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="]"/>
+    </comp>
+    <comp lib="8" loc="(510,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="bsp"/>
+    </comp>
+    <comp lib="8" loc="(515,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="#"/>
+    </comp>
+    <comp lib="8" loc="(555,980)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="ent"/>
+    </comp>
+    <comp lib="8" loc="(595,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="ins"/>
+    </comp>
+    <comp lib="8" loc="(595,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="del"/>
+    </comp>
+    <comp lib="8" loc="(600,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="lt"/>
+    </comp>
+    <comp lib="8" loc="(615,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="up"/>
+    </comp>
+    <comp lib="8" loc="(615,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="hme"/>
+    </comp>
+    <comp lib="8" loc="(615,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="end"/>
+    </comp>
+    <comp lib="8" loc="(620,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="dn"/>
+    </comp>
+    <comp lib="8" loc="(635,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="rt"/>
+    </comp>
+    <comp lib="8" loc="(635,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="pgd"/>
+    </comp>
+    <comp lib="8" loc="(640,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="pgu"/>
+    </comp>
+    <comp lib="8" loc="(720,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="!"/>
+    </comp>
+    <comp lib="8" loc="(725,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="|"/>
+    </comp>
+    <comp lib="8" loc="(730,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="Q"/>
+    </comp>
+    <comp lib="8" loc="(735,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="A"/>
+    </comp>
+    <comp lib="8" loc="(735,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="&quot;"/>
+    </comp>
+    <comp lib="8" loc="(745,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="W"/>
+    </comp>
+    <comp lib="8" loc="(750,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="Z"/>
+    </comp>
+    <comp lib="8" loc="(755,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="S"/>
+    </comp>
+    <comp lib="8" loc="(755,925)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="$"/>
+    </comp>
+    <comp lib="8" loc="(765,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="X"/>
+    </comp>
+    <comp lib="8" loc="(765,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="E"/>
+    </comp>
+    <comp lib="8" loc="(775,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="D"/>
+    </comp>
+    <comp lib="8" loc="(775,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="%"/>
+    </comp>
+    <comp lib="8" loc="(785,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="C"/>
+    </comp>
+    <comp lib="8" loc="(785,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="R"/>
+    </comp>
+    <comp lib="8" loc="(795,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="^"/>
+    </comp>
+    <comp lib="8" loc="(800,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="F"/>
+    </comp>
+    <comp lib="8" loc="(805,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="V"/>
+    </comp>
+    <comp lib="8" loc="(805,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="T"/>
+    </comp>
+    <comp lib="8" loc="(815,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="G"/>
+    </comp>
+    <comp lib="8" loc="(815,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="&amp;"/>
+    </comp>
+    <comp lib="8" loc="(825,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="B"/>
+    </comp>
+    <comp lib="8" loc="(825,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="Y"/>
+    </comp>
+    <comp lib="8" loc="(835,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="H"/>
+    </comp>
+    <comp lib="8" loc="(835,925)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="*"/>
+    </comp>
+    <comp lib="8" loc="(845,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="N"/>
+    </comp>
+    <comp lib="8" loc="(845,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="U"/>
+    </comp>
+    <comp lib="8" loc="(855,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="J"/>
+    </comp>
+    <comp lib="8" loc="(860,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="("/>
+    </comp>
+    <comp lib="8" loc="(865,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="M"/>
+    </comp>
+    <comp lib="8" loc="(865,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="I"/>
+    </comp>
+    <comp lib="8" loc="(875,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="K"/>
+    </comp>
+    <comp lib="8" loc="(875,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val=")"/>
+    </comp>
+    <comp lib="8" loc="(885,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="&lt;"/>
+    </comp>
+    <comp lib="8" loc="(890,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="O"/>
+    </comp>
+    <comp lib="8" loc="(895,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="L"/>
+    </comp>
+    <comp lib="8" loc="(900,915)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="_"/>
+    </comp>
+    <comp lib="8" loc="(905,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="&gt;"/>
+    </comp>
+    <comp lib="8" loc="(910,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="P"/>
+    </comp>
+    <comp lib="8" loc="(915,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val=":"/>
+    </comp>
+    <comp lib="8" loc="(920,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="+"/>
+    </comp>
+    <comp lib="8" loc="(925,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="?"/>
+    </comp>
+    <comp lib="8" loc="(925,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="{"/>
+    </comp>
+    <comp lib="8" loc="(935,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="@"/>
+    </comp>
+    <comp lib="8" loc="(950,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="}"/>
+    </comp>
+    <comp lib="8" loc="(955,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="~"/>
+    </comp>
+    <comp loc="(440,1220)" name="Computer"/>
+    <comp loc="(560,710)" name="KBDEncoder"/>
+    <comp loc="(740,1220)" name="VideoCard128x128"/>
+    <wire from="(1000,660)" to="(1000,1180)"/>
+    <wire from="(1010,650)" to="(1010,1200)"/>
+    <wire from="(1020,640)" to="(1020,1220)"/>
+    <wire from="(180,1290)" to="(190,1290)"/>
+    <wire from="(190,1260)" to="(190,1290)"/>
+    <wire from="(190,1260)" to="(200,1260)"/>
+    <wire from="(190,1290)" to="(310,1290)"/>
+    <wire from="(200,1010)" to="(280,1010)"/>
+    <wire from="(200,790)" to="(200,1010)"/>
+    <wire from="(200,790)" to="(470,790)"/>
+    <wire from="(210,800)" to="(210,970)"/>
+    <wire from="(210,800)" to="(480,800)"/>
+    <wire from="(210,970)" to="(290,970)"/>
+    <wire from="(220,810)" to="(220,930)"/>
+    <wire from="(220,810)" to="(490,810)"/>
+    <wire from="(220,930)" to="(280,930)"/>
+    <wire from="(230,820)" to="(230,890)"/>
+    <wire from="(230,820)" to="(500,820)"/>
+    <wire from="(230,890)" to="(240,890)"/>
+    <wire from="(240,830)" to="(240,850)"/>
+    <wire from="(240,830)" to="(510,830)"/>
+    <wire from="(280,1220)" to="(280,1350)"/>
+    <wire from="(280,1220)" to="(310,1220)"/>
+    <wire from="(280,1350)" to="(810,1350)"/>
+    <wire from="(290,1160)" to="(310,1160)"/>
+    <wire from="(290,1190)" to="(310,1190)"/>
+    <wire from="(390,1070)" to="(530,1070)"/>
+    <wire from="(440,1220)" to="(600,1220)"/>
+    <wire from="(440,1280)" to="(460,1280)"/>
+    <wire from="(440,650)" to="(450,650)"/>
+    <wire from="(450,610)" to="(450,650)"/>
+    <wire from="(460,610)" to="(460,660)"/>
+    <wire from="(470,610)" to="(470,620)"/>
+    <wire from="(470,780)" to="(470,790)"/>
+    <wire from="(480,780)" to="(480,800)"/>
+    <wire from="(490,610)" to="(490,660)"/>
+    <wire from="(490,660)" to="(1000,660)"/>
+    <wire from="(490,780)" to="(490,810)"/>
+    <wire from="(500,610)" to="(500,650)"/>
+    <wire from="(500,650)" to="(1010,650)"/>
+    <wire from="(500,780)" to="(500,820)"/>
+    <wire from="(510,610)" to="(510,640)"/>
+    <wire from="(510,640)" to="(1020,640)"/>
+    <wire from="(510,780)" to="(510,830)"/>
+    <wire from="(530,780)" to="(530,1070)"/>
+    <wire from="(540,780)" to="(540,960)"/>
+    <wire from="(540,960)" to="(560,960)"/>
+    <wire from="(560,700)" to="(560,710)"/>
+    <wire from="(560,780)" to="(560,890)"/>
+    <wire from="(560,890)" to="(590,890)"/>
+    <wire from="(560,960)" to="(560,970)"/>
+    <wire from="(570,780)" to="(570,930)"/>
+    <wire from="(570,930)" to="(590,930)"/>
+    <wire from="(580,780)" to="(580,980)"/>
+    <wire from="(580,980)" to="(620,980)"/>
+    <wire from="(590,1010)" to="(650,1010)"/>
+    <wire from="(590,780)" to="(590,840)"/>
+    <wire from="(590,840)" to="(650,840)"/>
+    <wire from="(620,780)" to="(620,830)"/>
+    <wire from="(620,830)" to="(660,830)"/>
+    <wire from="(620,980)" to="(620,990)"/>
+    <wire from="(630,780)" to="(630,820)"/>
+    <wire from="(630,820)" to="(670,820)"/>
+    <wire from="(640,780)" to="(640,810)"/>
+    <wire from="(640,810)" to="(680,810)"/>
+    <wire from="(650,780)" to="(650,800)"/>
+    <wire from="(650,800)" to="(700,800)"/>
+    <wire from="(650,840)" to="(650,1010)"/>
+    <wire from="(660,1010)" to="(720,1010)"/>
+    <wire from="(660,830)" to="(660,1010)"/>
+    <wire from="(670,1270)" to="(670,1280)"/>
+    <wire from="(670,820)" to="(670,970)"/>
+    <wire from="(670,970)" to="(730,970)"/>
+    <wire from="(680,810)" to="(680,930)"/>
+    <wire from="(680,930)" to="(720,930)"/>
+    <wire from="(700,800)" to="(700,890)"/>
+    <wire from="(700,890)" to="(710,890)"/>
+    <wire from="(740,1180)" to="(1000,1180)"/>
+    <wire from="(740,1200)" to="(1010,1200)"/>
+    <wire from="(740,1220)" to="(840,1220)"/>
+    <wire from="(740,1260)" to="(810,1260)"/>
+    <wire from="(810,1260)" to="(810,1350)"/>
+    <wire from="(840,1210)" to="(840,1220)"/>
+    <wire from="(840,1220)" to="(840,1230)"/>
+    <wire from="(860,1220)" to="(1020,1220)"/>
+  </circuit>
+  <circuit name="Computer512x256">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Computer512x256"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="2048000.0"/>
+    <comp lib="0" loc="(100,640)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="reset"/>
+    </comp>
+    <comp lib="0" loc="(1160,640)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(1200,690)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="9"/>
+      <a name="incoming" val="9"/>
+    </comp>
+    <comp lib="0" loc="(130,660)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(180,1290)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="reset"/>
+    </comp>
+    <comp lib="0" loc="(200,1260)" name="Tunnel">
+      <a name="label" val="reset"/>
+    </comp>
+    <comp lib="0" loc="(240,850)" name="Splitter">
+      <a name="bit0" val="12"/>
+      <a name="bit1" val="11"/>
+      <a name="bit10" val="2"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="0"/>
+      <a name="bit2" val="10"/>
+      <a name="bit3" val="9"/>
+      <a name="bit4" val="8"/>
+      <a name="bit5" val="7"/>
+      <a name="bit7" val="5"/>
+      <a name="bit8" val="4"/>
+      <a name="bit9" val="3"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="13"/>
+      <a name="incoming" val="13"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(240,890)" name="Splitter">
+      <a name="bit0" val="13"/>
+      <a name="bit1" val="12"/>
+      <a name="bit10" val="3"/>
+      <a name="bit11" val="2"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="0"/>
+      <a name="bit2" val="11"/>
+      <a name="bit3" val="10"/>
+      <a name="bit4" val="9"/>
+      <a name="bit5" val="8"/>
+      <a name="bit6" val="7"/>
+      <a name="bit7" val="6"/>
+      <a name="bit8" val="5"/>
+      <a name="bit9" val="4"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="14"/>
+      <a name="incoming" val="14"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(280,1010)" name="Splitter">
+      <a name="bit0" val="10"/>
+      <a name="bit1" val="9"/>
+      <a name="bit10" val="0"/>
+      <a name="bit2" val="8"/>
+      <a name="bit3" val="7"/>
+      <a name="bit4" val="6"/>
+      <a name="bit6" val="4"/>
+      <a name="bit7" val="3"/>
+      <a name="bit8" val="2"/>
+      <a name="bit9" val="1"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="11"/>
+      <a name="incoming" val="11"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(280,930)" name="Splitter">
+      <a name="bit0" val="11"/>
+      <a name="bit1" val="10"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="0"/>
+      <a name="bit2" val="9"/>
+      <a name="bit3" val="8"/>
+      <a name="bit4" val="7"/>
+      <a name="bit5" val="6"/>
+      <a name="bit6" val="5"/>
+      <a name="bit7" val="4"/>
+      <a name="bit8" val="3"/>
+      <a name="bit9" val="2"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="12"/>
+      <a name="incoming" val="12"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(290,1160)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="kbd"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(290,1190)" name="Constant"/>
+    <comp lib="0" loc="(290,970)" name="Splitter">
+      <a name="bit0" val="11"/>
+      <a name="bit1" val="10"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="0"/>
+      <a name="bit2" val="9"/>
+      <a name="bit3" val="8"/>
+      <a name="bit4" val="7"/>
+      <a name="bit5" val="6"/>
+      <a name="bit6" val="5"/>
+      <a name="bit7" val="4"/>
+      <a name="bit8" val="3"/>
+      <a name="bit9" val="2"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="12"/>
+      <a name="incoming" val="12"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(460,1280)" name="Tunnel">
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(560,710)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="kbd"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(590,1010)" name="Splitter">
+      <a name="bit0" val="2"/>
+      <a name="bit2" val="0"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(590,890)" name="Splitter">
+      <a name="bit0" val="2"/>
+      <a name="bit2" val="0"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(590,930)" name="Splitter">
+      <a name="bit0" val="2"/>
+      <a name="bit2" val="0"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(640,660)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="reset"/>
+    </comp>
+    <comp lib="0" loc="(670,1280)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(700,690)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(710,890)" name="Splitter">
+      <a name="bit0" val="10"/>
+      <a name="bit1" val="9"/>
+      <a name="bit10" val="0"/>
+      <a name="bit2" val="8"/>
+      <a name="bit3" val="7"/>
+      <a name="bit4" val="6"/>
+      <a name="bit6" val="4"/>
+      <a name="bit7" val="3"/>
+      <a name="bit8" val="2"/>
+      <a name="bit9" val="1"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="11"/>
+      <a name="incoming" val="11"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(720,1010)" name="Splitter">
+      <a name="bit0" val="10"/>
+      <a name="bit1" val="9"/>
+      <a name="bit10" val="0"/>
+      <a name="bit2" val="8"/>
+      <a name="bit3" val="7"/>
+      <a name="bit4" val="6"/>
+      <a name="bit6" val="4"/>
+      <a name="bit7" val="3"/>
+      <a name="bit8" val="2"/>
+      <a name="bit9" val="1"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="11"/>
+      <a name="incoming" val="11"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(720,930)" name="Splitter">
+      <a name="bit0" val="11"/>
+      <a name="bit1" val="10"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="0"/>
+      <a name="bit2" val="9"/>
+      <a name="bit3" val="8"/>
+      <a name="bit4" val="7"/>
+      <a name="bit5" val="6"/>
+      <a name="bit6" val="5"/>
+      <a name="bit7" val="4"/>
+      <a name="bit8" val="3"/>
+      <a name="bit9" val="2"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="12"/>
+      <a name="incoming" val="12"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(730,970)" name="Splitter">
+      <a name="bit0" val="11"/>
+      <a name="bit1" val="10"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="0"/>
+      <a name="bit2" val="9"/>
+      <a name="bit3" val="8"/>
+      <a name="bit4" val="7"/>
+      <a name="bit5" val="6"/>
+      <a name="bit6" val="5"/>
+      <a name="bit7" val="4"/>
+      <a name="bit8" val="3"/>
+      <a name="bit9" val="2"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="12"/>
+      <a name="incoming" val="12"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(860,1220)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+    </comp>
+    <comp lib="1" loc="(200,680)" name="NOT Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="5" loc="(140,610)" name="RGB Video">
+      <a name="color" val="8-Color RGB (3 bit)"/>
+      <a name="cursor" val="No Cursor"/>
+      <a name="height" val="256"/>
+      <a name="width" val="256"/>
+    </comp>
+    <comp lib="5" loc="(250,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(250,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(270,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(270,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(290,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(290,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(290,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(290,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(300,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(310,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(310,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(310,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(310,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(320,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(330,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(330,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(330,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(330,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(340,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(350,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(350,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(350,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(350,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(360,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(370,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(370,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(370,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(370,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(380,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(390,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(390,1070)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(390,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(390,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(390,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(400,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(410,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(410,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(410,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(410,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(420,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(430,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(430,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(430,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(430,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(440,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(450,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(450,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(450,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(450,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(460,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(470,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(470,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(470,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(470,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(480,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(490,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(490,870)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(490,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(490,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(500,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(510,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(510,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(520,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(560,970)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(600,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(600,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(600,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(620,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(620,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(620,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(620,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(640,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(640,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(640,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(660,610)" name="RGB Video">
+      <a name="color" val="8-Color RGB (3 bit)"/>
+      <a name="cursor" val="No Cursor"/>
+      <a name="height" val="256"/>
+      <a name="width" val="256"/>
+    </comp>
+    <comp lib="5" loc="(720,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(730,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(730,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(740,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(740,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(750,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(750,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(760,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(760,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(770,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(770,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(780,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(780,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(790,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(790,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(800,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(800,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(810,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(810,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(820,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(820,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(830,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(830,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(840,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(840,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(850,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(850,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(860,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(860,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(870,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(870,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(880,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(880,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(890,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(890,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(900,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(900,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(910,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(910,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(920,910)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(920,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(930,1030)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(930,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(940,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(950,950)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(960,990)" name="Button">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="8" loc="(245,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="esc"/>
+    </comp>
+    <comp lib="8" loc="(245,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="`"/>
+    </comp>
+    <comp lib="8" loc="(265,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f1"/>
+    </comp>
+    <comp lib="8" loc="(270,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="1"/>
+    </comp>
+    <comp lib="8" loc="(285,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="\"/>
+    </comp>
+    <comp lib="8" loc="(285,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f2"/>
+    </comp>
+    <comp lib="8" loc="(285,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="2"/>
+    </comp>
+    <comp lib="8" loc="(285,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="q"/>
+    </comp>
+    <comp lib="8" loc="(300,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="a"/>
+    </comp>
+    <comp lib="8" loc="(305,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="z"/>
+    </comp>
+    <comp lib="8" loc="(305,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f3"/>
+    </comp>
+    <comp lib="8" loc="(305,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="w"/>
+    </comp>
+    <comp lib="8" loc="(310,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="3"/>
+    </comp>
+    <comp lib="8" loc="(320,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="s"/>
+    </comp>
+    <comp lib="8" loc="(325,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="x"/>
+    </comp>
+    <comp lib="8" loc="(325,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f4"/>
+    </comp>
+    <comp lib="8" loc="(325,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="4"/>
+    </comp>
+    <comp lib="8" loc="(325,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="e"/>
+    </comp>
+    <comp lib="8" loc="(335,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="d"/>
+    </comp>
+    <comp lib="8" loc="(345,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="c"/>
+    </comp>
+    <comp lib="8" loc="(345,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f5"/>
+    </comp>
+    <comp lib="8" loc="(345,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="5"/>
+    </comp>
+    <comp lib="8" loc="(350,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="r"/>
+    </comp>
+    <comp lib="8" loc="(355,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f"/>
+    </comp>
+    <comp lib="8" loc="(365,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="v"/>
+    </comp>
+    <comp lib="8" loc="(365,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f6"/>
+    </comp>
+    <comp lib="8" loc="(365,915)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="6"/>
+    </comp>
+    <comp lib="8" loc="(365,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="t"/>
+    </comp>
+    <comp lib="8" loc="(375,995)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="g"/>
+    </comp>
+    <comp lib="8" loc="(385,1080)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="sp"/>
+    </comp>
+    <comp lib="8" loc="(385,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f7"/>
+    </comp>
+    <comp lib="8" loc="(385,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="7"/>
+    </comp>
+    <comp lib="8" loc="(390,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="b"/>
+    </comp>
+    <comp lib="8" loc="(390,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="y"/>
+    </comp>
+    <comp lib="8" loc="(395,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="h"/>
+    </comp>
+    <comp lib="8" loc="(405,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="n"/>
+    </comp>
+    <comp lib="8" loc="(405,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f8"/>
+    </comp>
+    <comp lib="8" loc="(405,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="8"/>
+    </comp>
+    <comp lib="8" loc="(405,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="u"/>
+    </comp>
+    <comp lib="8" loc="(420,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="j"/>
+    </comp>
+    <comp lib="8" loc="(425,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="m"/>
+    </comp>
+    <comp lib="8" loc="(425,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f9"/>
+    </comp>
+    <comp lib="8" loc="(425,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="i"/>
+    </comp>
+    <comp lib="8" loc="(430,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="9"/>
+    </comp>
+    <comp lib="8" loc="(440,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="k"/>
+    </comp>
+    <comp lib="8" loc="(445,1035)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val=","/>
+    </comp>
+    <comp lib="8" loc="(445,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f10"/>
+    </comp>
+    <comp lib="8" loc="(445,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="o"/>
+    </comp>
+    <comp lib="8" loc="(450,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="0"/>
+    </comp>
+    <comp lib="8" loc="(455,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="l"/>
+    </comp>
+    <comp lib="8" loc="(465,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f11"/>
+    </comp>
+    <comp lib="8" loc="(465,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="-"/>
+    </comp>
+    <comp lib="8" loc="(465,955)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="p"/>
+    </comp>
+    <comp lib="8" loc="(470,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="."/>
+    </comp>
+    <comp lib="8" loc="(475,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val=";"/>
+    </comp>
+    <comp lib="8" loc="(485,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="/"/>
+    </comp>
+    <comp lib="8" loc="(485,880)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="f12"/>
+    </comp>
+    <comp lib="8" loc="(485,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="="/>
+    </comp>
+    <comp lib="8" loc="(490,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="["/>
+    </comp>
+    <comp lib="8" loc="(495,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="'"/>
+    </comp>
+    <comp lib="8" loc="(505,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="]"/>
+    </comp>
+    <comp lib="8" loc="(510,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="bsp"/>
+    </comp>
+    <comp lib="8" loc="(515,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="#"/>
+    </comp>
+    <comp lib="8" loc="(555,980)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="ent"/>
+    </comp>
+    <comp lib="8" loc="(595,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="ins"/>
+    </comp>
+    <comp lib="8" loc="(595,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="del"/>
+    </comp>
+    <comp lib="8" loc="(600,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="lt"/>
+    </comp>
+    <comp lib="8" loc="(615,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="up"/>
+    </comp>
+    <comp lib="8" loc="(615,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="hme"/>
+    </comp>
+    <comp lib="8" loc="(615,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="end"/>
+    </comp>
+    <comp lib="8" loc="(620,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="dn"/>
+    </comp>
+    <comp lib="8" loc="(635,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="rt"/>
+    </comp>
+    <comp lib="8" loc="(635,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="pgd"/>
+    </comp>
+    <comp lib="8" loc="(640,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="pgu"/>
+    </comp>
+    <comp lib="8" loc="(720,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="!"/>
+    </comp>
+    <comp lib="8" loc="(725,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="|"/>
+    </comp>
+    <comp lib="8" loc="(730,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="Q"/>
+    </comp>
+    <comp lib="8" loc="(735,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="A"/>
+    </comp>
+    <comp lib="8" loc="(735,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="&quot;"/>
+    </comp>
+    <comp lib="8" loc="(745,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="W"/>
+    </comp>
+    <comp lib="8" loc="(750,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="Z"/>
+    </comp>
+    <comp lib="8" loc="(755,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="S"/>
+    </comp>
+    <comp lib="8" loc="(755,925)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="$"/>
+    </comp>
+    <comp lib="8" loc="(765,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="X"/>
+    </comp>
+    <comp lib="8" loc="(765,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="E"/>
+    </comp>
+    <comp lib="8" loc="(775,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="D"/>
+    </comp>
+    <comp lib="8" loc="(775,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="%"/>
+    </comp>
+    <comp lib="8" loc="(785,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="C"/>
+    </comp>
+    <comp lib="8" loc="(785,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="R"/>
+    </comp>
+    <comp lib="8" loc="(795,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="^"/>
+    </comp>
+    <comp lib="8" loc="(800,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="F"/>
+    </comp>
+    <comp lib="8" loc="(805,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="V"/>
+    </comp>
+    <comp lib="8" loc="(805,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="T"/>
+    </comp>
+    <comp lib="8" loc="(815,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="G"/>
+    </comp>
+    <comp lib="8" loc="(815,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="&amp;"/>
+    </comp>
+    <comp lib="8" loc="(825,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="B"/>
+    </comp>
+    <comp lib="8" loc="(825,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="Y"/>
+    </comp>
+    <comp lib="8" loc="(835,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="H"/>
+    </comp>
+    <comp lib="8" loc="(835,925)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="*"/>
+    </comp>
+    <comp lib="8" loc="(845,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="N"/>
+    </comp>
+    <comp lib="8" loc="(845,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="U"/>
+    </comp>
+    <comp lib="8" loc="(855,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="J"/>
+    </comp>
+    <comp lib="8" loc="(860,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="("/>
+    </comp>
+    <comp lib="8" loc="(865,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="M"/>
+    </comp>
+    <comp lib="8" loc="(865,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="I"/>
+    </comp>
+    <comp lib="8" loc="(875,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="K"/>
+    </comp>
+    <comp lib="8" loc="(875,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val=")"/>
+    </comp>
+    <comp lib="8" loc="(885,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="&lt;"/>
+    </comp>
+    <comp lib="8" loc="(890,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="O"/>
+    </comp>
+    <comp lib="8" loc="(895,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="L"/>
+    </comp>
+    <comp lib="8" loc="(900,915)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="_"/>
+    </comp>
+    <comp lib="8" loc="(905,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="&gt;"/>
+    </comp>
+    <comp lib="8" loc="(910,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="P"/>
+    </comp>
+    <comp lib="8" loc="(915,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val=":"/>
+    </comp>
+    <comp lib="8" loc="(920,920)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="+"/>
+    </comp>
+    <comp lib="8" loc="(925,1040)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="?"/>
+    </comp>
+    <comp lib="8" loc="(925,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="{"/>
+    </comp>
+    <comp lib="8" loc="(935,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="@"/>
+    </comp>
+    <comp lib="8" loc="(950,960)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="}"/>
+    </comp>
+    <comp lib="8" loc="(955,1000)" name="Text">
+      <a name="font" val="SansSerif bold 8"/>
+      <a name="text" val="~"/>
+    </comp>
+    <comp loc="(440,1220)" name="Computer"/>
+    <comp loc="(560,710)" name="KBDEncoder"/>
+    <comp loc="(740,1220)" name="VideoCard512x256"/>
+    <wire from="(100,640)" to="(140,640)"/>
+    <wire from="(1010,630)" to="(1010,1200)"/>
+    <wire from="(1020,620)" to="(1020,1220)"/>
+    <wire from="(1200,690)" to="(1200,1180)"/>
+    <wire from="(130,650)" to="(130,660)"/>
+    <wire from="(130,650)" to="(150,650)"/>
+    <wire from="(140,610)" to="(140,640)"/>
+    <wire from="(150,610)" to="(150,650)"/>
+    <wire from="(160,610)" to="(160,680)"/>
+    <wire from="(160,680)" to="(200,680)"/>
+    <wire from="(180,1290)" to="(190,1290)"/>
+    <wire from="(180,610)" to="(180,640)"/>
+    <wire from="(180,640)" to="(700,640)"/>
+    <wire from="(190,1260)" to="(190,1290)"/>
+    <wire from="(190,1260)" to="(200,1260)"/>
+    <wire from="(190,1290)" to="(310,1290)"/>
+    <wire from="(190,610)" to="(190,630)"/>
+    <wire from="(190,630)" to="(710,630)"/>
+    <wire from="(200,1010)" to="(280,1010)"/>
+    <wire from="(200,610)" to="(200,620)"/>
+    <wire from="(200,620)" to="(720,620)"/>
+    <wire from="(200,790)" to="(200,1010)"/>
+    <wire from="(200,790)" to="(470,790)"/>
+    <wire from="(210,800)" to="(210,970)"/>
+    <wire from="(210,800)" to="(480,800)"/>
+    <wire from="(210,970)" to="(290,970)"/>
+    <wire from="(220,810)" to="(220,930)"/>
+    <wire from="(220,810)" to="(490,810)"/>
+    <wire from="(220,930)" to="(280,930)"/>
+    <wire from="(230,680)" to="(680,680)"/>
+    <wire from="(230,820)" to="(230,890)"/>
+    <wire from="(230,820)" to="(500,820)"/>
+    <wire from="(230,890)" to="(240,890)"/>
+    <wire from="(240,830)" to="(240,850)"/>
+    <wire from="(240,830)" to="(510,830)"/>
+    <wire from="(280,1220)" to="(280,1350)"/>
+    <wire from="(280,1220)" to="(310,1220)"/>
+    <wire from="(280,1350)" to="(810,1350)"/>
+    <wire from="(290,1160)" to="(310,1160)"/>
+    <wire from="(290,1190)" to="(310,1190)"/>
+    <wire from="(390,1070)" to="(530,1070)"/>
+    <wire from="(440,1220)" to="(600,1220)"/>
+    <wire from="(440,1280)" to="(460,1280)"/>
+    <wire from="(470,780)" to="(470,790)"/>
+    <wire from="(480,780)" to="(480,800)"/>
+    <wire from="(490,780)" to="(490,810)"/>
+    <wire from="(500,780)" to="(500,820)"/>
+    <wire from="(510,780)" to="(510,830)"/>
+    <wire from="(530,780)" to="(530,1070)"/>
+    <wire from="(540,780)" to="(540,960)"/>
+    <wire from="(540,960)" to="(560,960)"/>
+    <wire from="(560,780)" to="(560,890)"/>
+    <wire from="(560,890)" to="(590,890)"/>
+    <wire from="(560,960)" to="(560,970)"/>
+    <wire from="(570,780)" to="(570,930)"/>
+    <wire from="(570,930)" to="(590,930)"/>
+    <wire from="(580,780)" to="(580,980)"/>
+    <wire from="(580,980)" to="(620,980)"/>
+    <wire from="(590,1010)" to="(650,1010)"/>
+    <wire from="(590,780)" to="(590,840)"/>
+    <wire from="(590,840)" to="(650,840)"/>
+    <wire from="(620,780)" to="(620,830)"/>
+    <wire from="(620,830)" to="(660,830)"/>
+    <wire from="(620,980)" to="(620,990)"/>
+    <wire from="(630,780)" to="(630,820)"/>
+    <wire from="(630,820)" to="(670,820)"/>
+    <wire from="(640,660)" to="(660,660)"/>
+    <wire from="(640,780)" to="(640,810)"/>
+    <wire from="(640,810)" to="(680,810)"/>
+    <wire from="(650,780)" to="(650,800)"/>
+    <wire from="(650,800)" to="(700,800)"/>
+    <wire from="(650,840)" to="(650,1010)"/>
+    <wire from="(660,1010)" to="(720,1010)"/>
+    <wire from="(660,610)" to="(660,660)"/>
+    <wire from="(660,830)" to="(660,1010)"/>
+    <wire from="(670,1270)" to="(670,1280)"/>
+    <wire from="(670,610)" to="(670,670)"/>
+    <wire from="(670,670)" to="(700,670)"/>
+    <wire from="(670,820)" to="(670,970)"/>
+    <wire from="(670,970)" to="(730,970)"/>
+    <wire from="(680,610)" to="(680,680)"/>
+    <wire from="(680,680)" to="(1180,680)"/>
+    <wire from="(680,810)" to="(680,930)"/>
+    <wire from="(680,930)" to="(720,930)"/>
+    <wire from="(700,610)" to="(700,640)"/>
+    <wire from="(700,640)" to="(1160,640)"/>
+    <wire from="(700,670)" to="(700,690)"/>
+    <wire from="(700,800)" to="(700,890)"/>
+    <wire from="(700,890)" to="(710,890)"/>
+    <wire from="(710,610)" to="(710,630)"/>
+    <wire from="(710,630)" to="(1010,630)"/>
+    <wire from="(720,610)" to="(720,620)"/>
+    <wire from="(720,620)" to="(1020,620)"/>
+    <wire from="(740,1180)" to="(1200,1180)"/>
+    <wire from="(740,1200)" to="(1010,1200)"/>
+    <wire from="(740,1220)" to="(840,1220)"/>
+    <wire from="(740,1250)" to="(810,1250)"/>
+    <wire from="(810,1250)" to="(810,1350)"/>
+    <wire from="(840,1210)" to="(840,1220)"/>
+    <wire from="(840,1220)" to="(840,1230)"/>
+    <wire from="(860,1220)" to="(1020,1220)"/>
   </circuit>
 </project>
